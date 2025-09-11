@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>da2be121-3520-4252-a7fc-df050b8580b7</ProjectGuid>
+    <ProjectGuid>{DA2BE121-3520-4252-A7FC-DF050B8580B7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RVA.Shared</RootNamespace>
@@ -31,24 +31,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DTOs\ClothingDto.cs" />
+    <Compile Include="DTOs\LocationDto.cs" />
+    <Compile Include="DTOs\RaftingDto.cs" />
+    <Compile Include="Enums\ClothingType.cs" />
+    <Compile Include="Enums\Intensity.cs" />
+    <Compile Include="Enums\KayakType.cs" />
+    <Compile Include="Enums\Material.cs" />
+    <Compile Include="Enums\RaftingState.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\IDataStorage.cs" />
+    <Compile Include="Interfaces\IObserver.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IStateManager.cs" />
+    <Compile Include="Models\Clothing.cs" />
+    <Compile Include="Models\Equipment.cs" />
+    <Compile Include="Models\Kayaking.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Rafting.cs" />
+    <Compile Include="Models\WaterActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
