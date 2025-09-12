@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,11 +51,15 @@
     <Compile Include="Enums\KayakType.cs" />
     <Compile Include="Enums\Material.cs" />
     <Compile Include="Enums\RaftingState.cs" />
+    <Compile Include="Interfaces\IChartDataProvider.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IDataStorage.cs" />
+    <Compile Include="Interfaces\IFactory.cs" />
+    <Compile Include="Interfaces\ILogger.cs" />
     <Compile Include="Interfaces\IObserver.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IStateManager.cs" />
+    <Compile Include="Interfaces\IValidator.cs" />
     <Compile Include="Models\Clothing.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Kayaking.cs" />
