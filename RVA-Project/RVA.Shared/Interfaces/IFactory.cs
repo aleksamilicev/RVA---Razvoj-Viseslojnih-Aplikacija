@@ -18,6 +18,6 @@ namespace RVA.Shared.Interfaces
     {
         IRepository<T> CreateRepository<T>() where T : class;
         IDataStorage CreateDataStorage(string storageType);
-        IValidator<T> CreateValidator<T>() where T : class;
+        IValidator<T> CreateValidator<T>() where T : class;  // potencijalno visak
     }
 }
