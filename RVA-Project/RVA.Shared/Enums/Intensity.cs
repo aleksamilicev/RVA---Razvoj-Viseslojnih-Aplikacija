@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RVA.Shared.Enums
 {
-    internal class Intensity
+    public enum Intensity
     {
+        Low = 1,
+        Medium = 2,
+        High = 3,
+        Extreme = 4
     }
 }

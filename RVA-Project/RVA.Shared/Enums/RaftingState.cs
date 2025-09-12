@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RVA.Shared.Enums
 {
-    internal class RaftingState
+    public enum RaftingState
     {
+        Planned = 1,
+        Boarding = 2,
+        Paddling = 3,
+        Resting = 4,
+        Finished = 5
     }
 }

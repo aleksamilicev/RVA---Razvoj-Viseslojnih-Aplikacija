@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RVA.Shared.Enums
 {
-    internal class KayakType
+    public enum KayakType
     {
+        Recreational = 1,
+        Touring = 2,
+        Whitewater = 3,
+        SeaKayak = 4,
+        Inflatable = 5
     }
 }

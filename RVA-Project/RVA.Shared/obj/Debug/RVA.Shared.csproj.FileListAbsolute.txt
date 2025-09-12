@@ -1,0 +1,6 @@
+C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Shared\bin\Debug\RVA.Shared.dll
+C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Shared\bin\Debug\RVA.Shared.pdb
+C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Shared\obj\Debug\RVA.Shared.csproj.AssemblyReference.cache
+C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Shared\obj\Debug\RVA.Shared.csproj.CoreCompileInputs.cache
+C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Shared\obj\Debug\RVA.Shared.dll
+C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Shared\obj\Debug\RVA.Shared.pdb

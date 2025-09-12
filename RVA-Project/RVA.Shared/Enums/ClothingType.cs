@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace RVA.Shared.Enums
 {
-    internal class ClothingType
+    public enum ClothingType
     {
+        Wetsuit = 1,
+        LifeJacket = 2,
+        Helmet = 3,
+        Boots = 4,
+        Paddle = 5,
+        Gloves = 6
     }
 }
