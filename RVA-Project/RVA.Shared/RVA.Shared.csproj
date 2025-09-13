@@ -46,6 +46,7 @@
     <Compile Include="DTOs\ClothingDto.cs" />
     <Compile Include="DTOs\LocationDto.cs" />
     <Compile Include="DTOs\RaftingDto.cs" />
+    <Compile Include="DTOs\ValidationResult.cs" />
     <Compile Include="Enums\ClothingType.cs" />
     <Compile Include="Enums\Intensity.cs" />
     <Compile Include="Enums\KayakType.cs" />

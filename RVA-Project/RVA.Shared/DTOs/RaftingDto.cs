@@ -24,6 +24,9 @@ namespace RVA.Shared.DTOs
         public DateTime EndTime { get; set; }
 
         [DataMember]
+        public TimeSpan Duration { get; set; }
+
+        [DataMember]
         public double Distance { get; set; }
 
         [DataMember]
@@ -60,10 +63,10 @@ namespace RVA.Shared.DTOs
         public int EndLocationId { get; set; }
 
         [DataMember]
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         [DataMember]
-        public DateTime ModifiedDate { get; set; }
+        public DateTime ModifiedDate { get; set; } = DateTime.Now;
 
         // Lists za WCF transfer
         [DataMember]

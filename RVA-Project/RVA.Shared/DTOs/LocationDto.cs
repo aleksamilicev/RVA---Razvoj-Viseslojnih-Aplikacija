@@ -35,6 +35,6 @@ namespace RVA.Shared.DTOs
         public bool HasFacilities { get; set; }
 
         [DataMember]
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
     }
 }

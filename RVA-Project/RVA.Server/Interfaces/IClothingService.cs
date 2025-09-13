@@ -1,8 +1,13 @@
-﻿using System;
+﻿using RVA.Shared.DTOs;
+using RVA.Shared.Enums;
+using RVA.Shared.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using ValidationResult = RVA.Shared.DTOs.ValidationResult;
 
 namespace RVA.Server.Interfaces
 {
