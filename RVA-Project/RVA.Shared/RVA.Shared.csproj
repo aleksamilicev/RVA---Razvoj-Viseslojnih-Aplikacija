@@ -51,6 +51,8 @@
     <Compile Include="Enums\KayakType.cs" />
     <Compile Include="Enums\Material.cs" />
     <Compile Include="Enums\RaftingState.cs" />
+    <Compile Include="Exceptions\RepositoryException.cs" />
+    <Compile Include="Exceptions\StorageException.cs" />
     <Compile Include="Interfaces\IChartDataProvider.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IDataStorage.cs" />
