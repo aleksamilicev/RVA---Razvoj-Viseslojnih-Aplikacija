@@ -8,7 +8,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RVA.Server.Services
+namespace RVA.Server.Interfaces
 {
     /// WCF Service Contract for Rafting operations
     [ServiceContract]

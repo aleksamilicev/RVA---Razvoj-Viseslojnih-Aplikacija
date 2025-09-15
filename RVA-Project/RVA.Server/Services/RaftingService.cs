@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.ServiceModel;
 using System.Web;
+using RVA.Server.Interfaces;
 
 namespace RVA.Server.Services
 {
