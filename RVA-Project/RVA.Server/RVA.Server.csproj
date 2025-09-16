@@ -108,9 +108,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ClothingRepository.cs" />
     <Compile Include="Data\LocationRepository.cs" />
     <Compile Include="Data\RaftingRepository.cs" />
-    <Compile Include="Data\RepositoryFactory.cs" />
+    <Compile Include="Data\BaseRepository.cs" />
     <Compile Include="Factories\RepositoryFactory.cs" />
     <Compile Include="Factories\StorageFactory.cs" />
     <Compile Include="Interfaces\IClothingService.cs" />

@@ -11,15 +11,15 @@ namespace RVA.Server.Factories
     {
         public static RaftingRepository CreateRaftingRepository()
         {
-            var storage = StorageFactory.CreateStorage("xml"); // ili csv/json
             var logger = new ServerLogger();
+            var storage = StorageFactory.CreateStorage("xml", logger); // ili csv/json
             return new RaftingRepository((Shared.Interfaces.IDataStorage)storage, logger);
         }
 
         public static LocationRepository CreateLocationRepository()
         {
-            var storage = StorageFactory.CreateStorage("xml");
             var logger = new ServerLogger();
+            var storage = StorageFactory.CreateStorage("xml", logger);
             return new LocationRepository((Shared.Interfaces.IDataStorage)storage, logger);
         }
     }

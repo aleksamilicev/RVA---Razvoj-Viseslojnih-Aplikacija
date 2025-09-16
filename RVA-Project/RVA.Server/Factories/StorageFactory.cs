@@ -22,5 +22,4 @@ namespace RVA.Server.Factories
         }
     }
 
-
 }
