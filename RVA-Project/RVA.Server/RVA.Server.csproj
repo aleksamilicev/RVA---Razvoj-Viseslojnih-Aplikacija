@@ -111,7 +111,8 @@
     <Compile Include="Data\LocationRepository.cs" />
     <Compile Include="Data\RaftingRepository.cs" />
     <Compile Include="Data\RepositoryFactory.cs" />
-    <Compile Include="Factories\RaftingServiceHostFactory.cs" />
+    <Compile Include="Factories\RepositoryFactory.cs" />
+    <Compile Include="Factories\StorageFactory.cs" />
     <Compile Include="Interfaces\IClothingService.cs" />
     <Compile Include="Interfaces\IDataStorage.cs" />
     <Compile Include="Interfaces\ILocationService.cs" />
