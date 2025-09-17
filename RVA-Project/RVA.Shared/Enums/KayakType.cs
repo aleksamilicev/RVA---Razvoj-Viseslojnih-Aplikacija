@@ -8,10 +8,10 @@ namespace RVA.Shared.Enums
 {
     public enum KayakType
     {
-        Recreational = 1,
-        Touring = 2,
-        Whitewater = 3,
-        SeaKayak = 4,
-        Inflatable = 5
+        Recreational = 0,
+        Touring = 1,
+        Whitewater = 2,
+        SeaKayak = 3,
+        Inflatable = 4
     }
 }

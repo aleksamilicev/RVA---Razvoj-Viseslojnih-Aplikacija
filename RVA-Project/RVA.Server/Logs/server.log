@@ -1,3 +1,61 @@
 2025-09-16 17:36:22,167 [19] INFO  ServerLogger - ServerLogger successfully configured
 2025-09-16 17:36:22,183 [19] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
 2025-09-16 17:36:22,183 [19] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 11:53:58,419 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 11:53:58,435 [8] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 11:53:58,435 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 12:16:15,313 [20] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 12:16:15,338 [20] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 12:16:15,339 [20] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 12:16:15,740 [20] INFO  ServerLogger - Getting all raftings
+2025-09-17 12:16:20,321 [71] INFO  ServerLogger - Getting all raftings
+2025-09-17 12:16:21,851 [81] INFO  ServerLogger - Getting all raftings
+2025-09-17 12:24:15,608 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 12:24:15,634 [8] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 12:24:15,635 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 12:44:29,410 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 12:44:29,436 [8] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 12:44:29,436 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 12:44:42,840 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 12:49:40,158 [26] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 12:49:40,181 [26] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 12:49:40,181 [26] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 12:54:01,885 [19] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 12:54:01,914 [19] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 12:54:01,914 [19] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 12:57:04,825 [19] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 12:57:04,847 [19] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 12:57:04,847 [19] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 12:58:43,920 [19] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 12:58:43,936 [19] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 12:58:43,936 [19] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 12:58:56,261 [19] INFO  ServerLogger - Getting all raftings
+2025-09-17 12:58:57,956 [19] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:10:50,280 [43] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 13:10:50,302 [43] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 13:10:50,302 [43] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 13:11:17,381 [64] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:11:19,866 [64] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:12:33,046 [68] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:12:34,317 [72] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:17:23,445 [80] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 13:17:23,477 [80] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 13:17:23,477 [80] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 13:17:35,702 [80] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 13:26:54,886 [94] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 13:26:54,912 [94] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 13:26:54,914 [94] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 13:27:04,843 [94] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 13:27:13,585 [94] INFO  ServerLogger - No existing data file found for ClothingDto, starting with empty collection
+2025-09-17 13:27:30,716 [94] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:27:30,795 [94] INFO  ServerLogger - Getting all locations
+2025-09-17 13:27:30,795 [94] INFO  ServerLogger - Getting all clothing items
+2025-09-17 13:27:33,513 [94] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:27:33,513 [94] INFO  ServerLogger - Getting all locations
+2025-09-17 13:27:33,525 [94] INFO  ServerLogger - Getting all clothing items
+2025-09-17 13:28:30,990 [94] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:28:30,994 [94] INFO  ServerLogger - Getting all locations
+2025-09-17 13:28:30,994 [94] INFO  ServerLogger - Getting all clothing items
+2025-09-17 13:28:31,698 [94] INFO  ServerLogger - Getting all raftings
+2025-09-17 13:28:31,698 [94] INFO  ServerLogger - Getting all locations
+2025-09-17 13:28:31,698 [94] INFO  ServerLogger - Getting all clothing items

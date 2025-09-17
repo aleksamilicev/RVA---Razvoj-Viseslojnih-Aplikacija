@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace RVA.Shared.Interfaces
 {
-    /// Repository Pattern - Generic interfejs za data access
+    /// Generic Repository Pattern interfejs za data access
+    /// <typeparam name="T">Tip entiteta</typeparam>
     public interface IRepository<T> where T : class
     {
         // CRUD operacije

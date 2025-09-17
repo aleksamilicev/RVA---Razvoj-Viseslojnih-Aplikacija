@@ -1,4 +1,4 @@
-﻿using RVA.Server.Interfaces;
+﻿using RVA.Shared.Interfaces;
 using RVA.Shared.DTOs;
 using RVA.Shared.Enums;
 using System;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace RVA.Client.Services
 {
     /// <summary>
-    /// Centralized WCF client for all services
+    /// Centralized WCF client for all services with better error handling
     /// </summary>
     public class WcfServiceClient : IDisposable
     {
@@ -26,14 +26,14 @@ namespace RVA.Client.Services
         private bool _disposed = false;
         #endregion
 
-        #region Properties
+        #region Properties with Better Error Handling
         public IRaftingService RaftingService
         {
             get
             {
                 if (_raftingService == null)
                 {
-                    _raftingService = InitializeService(ref _raftingChannelFactory, ref _raftingService, "RaftingServiceEndpoint");
+                    InitializeRaftingService();
                 }
                 return _raftingService;
             }
@@ -45,7 +45,7 @@ namespace RVA.Client.Services
             {
                 if (_locationService == null)
                 {
-                    _locationService = InitializeService(ref _locationChannelFactory, ref _locationService, "LocationServiceEndpoint");
+                    InitializeLocationService();
                 }
                 return _locationService;
             }
@@ -57,32 +57,157 @@ namespace RVA.Client.Services
             {
                 if (_clothingService == null)
                 {
-                    _clothingService = InitializeService(ref _clothingChannelFactory, ref _clothingService, "ClothingServiceEndpoint");
+                    InitializeClothingService();
                 }
                 return _clothingService;
             }
         }
         #endregion
 
-        #region Initialization
-        private T InitializeService<T>(ref ChannelFactory<T> factory, ref T service, string endpointName) where T : class
+        #region Initialization Methods
+        private void InitializeRaftingService()
         {
             lock (_lock)
             {
-                if (service != null) return service;
+                if (_raftingService != null) return;
 
                 try
                 {
-                    factory = new ChannelFactory<T>(endpointName);
-                    service = factory.CreateChannel();
-                    ((ICommunicationObject)service).Open();
-                    return service;
+                    _raftingChannelFactory = new ChannelFactory<IRaftingService>("RaftingServiceEndpoint");
+                    _raftingService = _raftingChannelFactory.CreateChannel();
+
+                    // Test da li kanal radi
+                    ((ICommunicationObject)_raftingService).Open();
                 }
                 catch (Exception ex)
                 {
-                    throw new ServiceException($"Failed to initialize service {typeof(T).Name}: {ex.Message}", ex);
+                    throw new ServiceException($"Failed to initialize RaftingService. Check if server is running on correct port and endpoint exists. Details: {ex.Message}", ex);
                 }
             }
+        }
+
+        private void InitializeLocationService()
+        {
+            lock (_lock)
+            {
+                if (_locationService != null) return;
+
+                try
+                {
+                    _locationChannelFactory = new ChannelFactory<ILocationService>("LocationServiceEndpoint");
+                    _locationService = _locationChannelFactory.CreateChannel();
+                    ((ICommunicationObject)_locationService).Open();
+                }
+                catch (Exception ex)
+                {
+                    throw new ServiceException($"Failed to initialize LocationService. Details: {ex.Message}", ex);
+                }
+            }
+        }
+
+        private void InitializeClothingService()
+        {
+            lock (_lock)
+            {
+                if (_clothingService != null) return;
+
+                try
+                {
+                    _clothingChannelFactory = new ChannelFactory<IClothingService>("ClothingServiceEndpoint");
+                    _clothingService = _clothingChannelFactory.CreateChannel();
+                    ((ICommunicationObject)_clothingService).Open();
+                }
+                catch (Exception ex)
+                {
+                    throw new ServiceException($"Failed to initialize ClothingService. Details: {ex.Message}", ex);
+                }
+            }
+        }
+        #endregion
+
+        #region Connection Management with Detailed Diagnostics
+        public string TestConnectionWithDetails()
+        {
+            var results = new List<string>();
+
+            // Test RaftingService
+            try
+            {
+                var raftings = RaftingService.GetAll();
+                results.Add("✓ RaftingService: Connected successfully");
+            }
+            catch (EndpointNotFoundException ex)
+            {
+                results.Add($"✗ RaftingService: Endpoint not found - {ex.Message}");
+            }
+            catch (CommunicationException ex)
+            {
+                results.Add($"✗ RaftingService: Communication error - {ex.Message}");
+            }
+            catch (TimeoutException ex)
+            {
+                results.Add($"✗ RaftingService: Timeout - {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                results.Add($"✗ RaftingService: Unknown error - {ex.Message}");
+            }
+
+            // Test LocationService
+            try
+            {
+                var locations = LocationService.GetAll();
+                results.Add("✓ LocationService: Connected successfully");
+            }
+            catch (EndpointNotFoundException ex)
+            {
+                results.Add($"✗ LocationService: Endpoint not found - {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                results.Add($"✗ LocationService: Error - {ex.Message}");
+            }
+
+            // Test ClothingService
+            try
+            {
+                var clothes = ClothingService.GetAll();
+                results.Add("✓ ClothingService: Connected successfully");
+            }
+            catch (EndpointNotFoundException ex)
+            {
+                results.Add($"✗ ClothingService: Endpoint not found - {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                results.Add($"✗ ClothingService: Error - {ex.Message}");
+            }
+
+            return string.Join("\n", results);
+        }
+
+        public bool TestConnection()
+        {
+            try
+            {
+                RaftingService.GetAll();
+                LocationService.GetAll();
+                ClothingService.GetAll();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public void RefreshConnections()
+        {
+            Dispose();
+            _disposed = false;
+            _raftingService = null;
+            _locationService = null;
+            _clothingService = null;
         }
         #endregion
 
@@ -125,32 +250,6 @@ namespace RVA.Client.Services
             {
                 throw new ServiceException($"Error during {operation}: {ex.Message}", ex);
             }
-        }
-        #endregion
-
-        #region Connection Management
-        public bool TestConnection()
-        {
-            try
-            {
-                RaftingService.GetAll();
-                LocationService.GetAll();
-                ClothingService.GetAll();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        public void RefreshConnections()
-        {
-            Dispose();
-            _disposed = false;
-            _raftingService = null;
-            _locationService = null;
-            _clothingService = null;
         }
         #endregion
 

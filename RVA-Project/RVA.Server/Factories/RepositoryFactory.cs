@@ -1,5 +1,7 @@
 ﻿using RVA.Server.Data;
 using RVA.Server.Logging;
+using RVA.Shared.DTOs;
+using RVA.Shared.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,16 +14,22 @@ namespace RVA.Server.Factories
         public static RaftingRepository CreateRaftingRepository()
         {
             var logger = new ServerLogger();
-            var storage = StorageFactory.CreateStorage("xml", logger); // ili csv/json
-            return new RaftingRepository((Shared.Interfaces.IDataStorage)storage, logger);
+            var storage = StorageFactory.CreateStorage("xml", logger);
+            return new RaftingRepository(storage, logger);
         }
 
         public static LocationRepository CreateLocationRepository()
         {
             var logger = new ServerLogger();
             var storage = StorageFactory.CreateStorage("xml", logger);
-            return new LocationRepository((Shared.Interfaces.IDataStorage)storage, logger);
+            return new LocationRepository(storage, logger);
+        }
+
+        public static ClothingRepository CreateClothingRepository()
+        {
+            var logger = new ServerLogger();
+            var storage = StorageFactory.CreateStorage("xml", logger);
+            return new ClothingRepository(storage, logger);
         }
     }
-
 }

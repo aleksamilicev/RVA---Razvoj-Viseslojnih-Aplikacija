@@ -103,22 +103,25 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClothingService.svc" />
     <Content Include="DataFiles\rafting_data.xml" />
+    <Content Include="LocationService.svc" />
     <Content Include="RaftingService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClothingService.svc.cs">
+      <DependentUpon>ClothingService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Data\ClothingRepository.cs" />
     <Compile Include="Data\LocationRepository.cs" />
     <Compile Include="Data\RaftingRepository.cs" />
     <Compile Include="Data\BaseRepository.cs" />
     <Compile Include="Factories\RepositoryFactory.cs" />
     <Compile Include="Factories\StorageFactory.cs" />
-    <Compile Include="Interfaces\IClothingService.cs" />
-    <Compile Include="Interfaces\IDataStorage.cs" />
-    <Compile Include="Interfaces\ILocationService.cs" />
-    <Compile Include="Interfaces\IRaftingService.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="LocationService.svc.cs">
+      <DependentUpon>LocationService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Logging\ServerLogger.cs" />
     <Compile Include="Managers\StateManager.cs" />
     <Compile Include="Managers\ValidationManager.cs" />

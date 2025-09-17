@@ -8,9 +8,9 @@ namespace RVA.Shared.Enums
 {
     public enum Intensity
     {
-        Low = 1,
-        Medium = 2,
-        High = 3,
-        Extreme = 4
+        Low = 0,
+        Medium = 1,
+        High = 2,
+        Extreme = 3
     }
 }

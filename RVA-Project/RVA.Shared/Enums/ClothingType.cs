@@ -8,11 +8,11 @@ namespace RVA.Shared.Enums
 {
     public enum ClothingType
     {
-        Wetsuit = 1,
-        LifeJacket = 2,
-        Helmet = 3,
-        Boots = 4,
-        Paddle = 5,
-        Gloves = 6
+        Wetsuit = 0,
+        LifeJacket = 1,
+        Helmet = 2,
+        Boots = 3,
+        Paddle = 4,
+        Gloves = 5
     }
 }

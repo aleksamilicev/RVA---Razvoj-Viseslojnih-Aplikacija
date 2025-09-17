@@ -1,4 +1,5 @@
-﻿using RVA.Server.Interfaces;    // eventualno obrisi ovo, jer mislim da je visak
+﻿using RVA.Server.Factories;
+using RVA.Server.Logging;
 using RVA.Shared.DTOs;
 using RVA.Shared.Enums;
 using RVA.Shared.Interfaces;
@@ -20,6 +21,13 @@ namespace RVA.Server.Services
          */
         private readonly Shared.Interfaces.IRepository<ClothingDto> _repository;
         private readonly ILogger _logger;
+
+        public ClothingService()
+        {
+            // Inicijalizuj dependencies kroz factory
+            _repository = RepositoryFactory.CreateClothingRepository();
+            _logger = new ServerLogger();
+        }
 
         public ClothingService(Shared.Interfaces.IRepository<ClothingDto> repository, ILogger logger)
         {

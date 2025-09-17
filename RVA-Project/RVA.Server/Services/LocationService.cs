@@ -1,5 +1,6 @@
 ﻿using RVA.Server.Data;
-using RVA.Server.Interfaces;
+using RVA.Server.Factories;
+using RVA.Server.Logging;
 using RVA.Shared.DTOs;
 using RVA.Shared.Interfaces;
 using System;
@@ -16,6 +17,22 @@ namespace RVA.Server.Services
     {
         private readonly LocationRepository _repository;
         private readonly ILogger _logger;
+
+        public LocationService()
+        {
+            // Inicijalizuj dependencies kroz factory
+            _repository = RepositoryFactory.CreateLocationRepository();
+            _logger = new ServerLogger();
+        }
+
+        /*
+        public LocationService()
+        {
+            // Inicijalizuj dependencies kroz factory
+            _repository = RepositoryFactory.CreateLocationRepository();
+            //_locationRepository = RepositoryFactory.CreateLocationRepository();
+            _logger = new ServerLogger();
+        }*/
 
         public LocationService(LocationRepository repository, ILogger logger)
         {

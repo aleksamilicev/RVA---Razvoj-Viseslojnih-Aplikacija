@@ -8,10 +8,10 @@ namespace RVA.Shared.Enums
 {
     public enum RaftingState
     {
-        Planned = 1,
-        Boarding = 2,
-        Paddling = 3,
-        Resting = 4,
-        Finished = 5
+        Planned = 0,
+        Boarding = 1,
+        Paddling = 2,
+        Resting = 3,
+        Finished = 4
     }
 }

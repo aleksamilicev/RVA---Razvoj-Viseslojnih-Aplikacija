@@ -23,6 +23,7 @@ namespace RVA.Client
         public MainWindow()
         {
             InitializeComponent();
+            //DataContext = new RVA.Client.ViewModels.MainViewModel(); 
         }
     }
 }

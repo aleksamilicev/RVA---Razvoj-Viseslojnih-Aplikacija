@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ValidationResult = RVA.Shared.DTOs.ValidationResult;
 
-namespace RVA.Server.Interfaces
+namespace RVA.Shared.Interfaces
 {
     [ServiceContract]
     public interface IClothingService

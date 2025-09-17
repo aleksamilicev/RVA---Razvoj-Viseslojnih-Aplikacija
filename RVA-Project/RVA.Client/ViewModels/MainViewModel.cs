@@ -11,51 +11,79 @@ namespace RVA.Client.ViewModels
     public class MainViewModel : BaseViewModel
     {
         private readonly WcfServiceClient _serviceClient;
-
         private string _connectionStatus;
+
         public string ConnectionStatus
         {
             get => _connectionStatus;
             set
             {
                 _connectionStatus = value;
-                OnPropertyChanged(); // iz BaseViewModel
+                OnPropertyChanged();
             }
         }
 
-        // Command za testiranje konekcije
+        // Komande
         public ICommand TestConnectionCommand { get; }
+        public ICommand DetailedTestCommand { get; }
 
         public MainViewModel()
         {
             // 1. Generiši testne podatke
             string dataDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DataFiles");
-            DataSeeder.SeedRaftingData(dataDir, 10); // generiše 10 rafting aktivnosti
+            try
+            {
+                DataSeeder.SeedRaftingData(dataDir, 10);
+                ConnectionStatus = "Test data generated successfully. Ready to test connection.";
+            }
+            catch (Exception ex)
+            {
+                ConnectionStatus = $"Error generating test data: {ex.Message}";
+            }
 
             // 2. Inicijalizuj WCF servis
             _serviceClient = new WcfServiceClient();
 
-            // 3. Inicijalizuj komandu
+            // 3. Inicijalizuj komande
             TestConnectionCommand = new RelayCommand(TestConnection);
+            DetailedTestCommand = new RelayCommand(DetailedTest);
         }
 
         private void TestConnection()
         {
             try
             {
+                ConnectionStatus = "Testing connection...";
                 bool result = _serviceClient.TestConnection();
                 ConnectionStatus = result ? "Connection successful!" : "Connection failed!";
             }
+            catch (ServiceException ex)
+            {
+                ConnectionStatus = $"Service Error: {ex.Message}";
+            }
             catch (Exception ex)
             {
-                ConnectionStatus = $"Error: {ex.Message}";
+                ConnectionStatus = $"Unexpected Error: {ex.Message}";
             }
         }
 
-        // Po potrebi dispose servisa
+        private void DetailedTest()
+        {
+            try
+            {
+                ConnectionStatus = "Running detailed connection test...\n";
+                string details = _serviceClient.TestConnectionWithDetails();
+                ConnectionStatus = $"Detailed Test Results:\n{details}";
+            }
+            catch (Exception ex)
+            {
+                ConnectionStatus = $"Detailed Test Error: {ex.Message}";
+            }
+        }
+
         public void Cleanup()
         {
-            _serviceClient.Dispose();
+            _serviceClient?.Dispose();
         }
     }
 }

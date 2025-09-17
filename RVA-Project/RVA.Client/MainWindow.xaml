@@ -3,10 +3,50 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RVA.Client"
+        xmlns:local="clr-namespace:RVA.Client.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="RVA Client - WCF Connection Test" Height="500" Width="900">
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Text="WCF Service Connection Test" 
+                   FontSize="20" FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   Margin="20"/>
+
+        <!-- Main Content -->
+        <ScrollViewer Grid.Row="1" Margin="20">
+            <Border Background="#F5F5F5"
+                    Padding="10"
+                    BorderBrush="Gray"
+                    BorderThickness="1">
+                <TextBlock Text="{Binding ConnectionStatus}" 
+                           FontSize="12" 
+                           FontFamily="Consolas"
+                           TextWrapping="Wrap"/>
+            </Border>
+        </ScrollViewer>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    Margin="20">
+            <Button Content="Quick Test" 
+                    Command="{Binding TestConnectionCommand}" 
+                    Width="120" Height="40" 
+                    Margin="5"/>
+            <Button Content="Detailed Test" 
+                    Command="{Binding DetailedTestCommand}" 
+                    Width="120" Height="40" 
+                    Margin="5"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -7,7 +7,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RVA.Server.Interfaces
+namespace RVA.Shared.Interfaces
 {
     [ServiceContract]
     public interface ILocationService

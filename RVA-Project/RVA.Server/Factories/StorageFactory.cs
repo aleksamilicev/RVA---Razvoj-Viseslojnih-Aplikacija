@@ -1,5 +1,5 @@
 ﻿using log4net.Repository.Hierarchy;
-using RVA.Server.Interfaces;
+using RVA.Shared.Interfaces;
 using RVA.Server.Storage;
 using System;
 using System.Collections.Generic;
