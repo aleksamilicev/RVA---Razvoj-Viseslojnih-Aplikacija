@@ -1,0 +1,3 @@
+Id,Name,Description,StartTime,EndTime,Duration,Distance,CurrentIntensity,CurrentSpeedKmh,Capacity,CurrentState,GuideId,PricePerPerson,WeatherConditions,ParticipantCount,MaxParticipants,StartLocationId,EndLocationId,CreatedDate,ModifiedDate,UsedClothingIds,UsedEquipmentIds
+1,,,1.1.0001. 00:00:00,20.9.2025. 14:00:00,00:00:00,0,Medium,"12,5",8,Resting,101,"45,50",Sunny,0,0,1,2,17.9.2025. 10:00:00,17.9.2025. 23:24:04,System.Collections.Generic.List`1[System.Int32],System.Collections.Generic.List`1[System.Int32]
+2,,,1.1.0001. 00:00:00,21.9.2025. 16:30:00,00:00:00,0,High,15,6,Resting,102,"55,00",Cloudy,0,0,1,3,17.9.2025. 10:30:00,17.9.2025. 23:23:48,System.Collections.Generic.List`1[System.Int32],System.Collections.Generic.List`1[System.Int32]

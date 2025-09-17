@@ -59,3 +59,303 @@
 2025-09-17 13:28:31,698 [94] INFO  ServerLogger - Getting all raftings
 2025-09-17 13:28:31,698 [94] INFO  ServerLogger - Getting all locations
 2025-09-17 13:28:31,698 [94] INFO  ServerLogger - Getting all clothing items
+2025-09-17 17:48:31,030 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 17:48:31,046 [8] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 17:48:31,046 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 17:48:40,418 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:48:40,700 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:48:44,845 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:48:44,847 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 17:48:44,859 [8] INFO  ServerLogger - Getting all locations
+2025-09-17 17:48:44,859 [8] INFO  ServerLogger - No existing data file found for ClothingDto, starting with empty collection
+2025-09-17 17:48:44,859 [8] INFO  ServerLogger - Getting all clothing items
+2025-09-17 17:48:51,944 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:09,460 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:09,728 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:13,980 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:18,691 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:18,847 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:18,974 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:25,521 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:25,523 [49] INFO  ServerLogger - Getting all locations
+2025-09-17 17:58:25,531 [49] INFO  ServerLogger - Getting all clothing items
+2025-09-17 17:58:27,367 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:33,332 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:34,672 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:34,850 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:40,164 [49] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:57,692 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:58:57,976 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:00,260 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:00,260 [53] INFO  ServerLogger - Getting all locations
+2025-09-17 17:59:00,273 [53] INFO  ServerLogger - Getting all clothing items
+2025-09-17 17:59:02,481 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:02,623 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:02,764 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:09,281 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:09,439 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:09,758 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:09,901 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:14,279 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:19,095 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:19,110 [53] INFO  ServerLogger - Getting all locations
+2025-09-17 17:59:19,113 [53] INFO  ServerLogger - Getting all clothing items
+2025-09-17 17:59:20,934 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:21,190 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:21,330 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 17:59:21,488 [53] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:01:14,060 [54] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:05:29,862 [54] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:05:30,516 [78] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:05:35,874 [79] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:05:36,454 [79] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:05:36,610 [79] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:05:37,442 [79] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:05:37,753 [79] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:05:37,858 [54] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:13:31,662 [54] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:13:32,192 [99] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:13:36,047 [100] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:13:36,182 [100] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:13:36,313 [54] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:13:37,432 [54] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:13:37,585 [100] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:42:14,073 [100] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:49:26,627 [100] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:49:26,924 [100] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:49:38,311 [100] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:49:49,431 [48] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:51:14,745 [48] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:51:31,049 [48] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:52:32,122 [10] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 18:53:47,433 [10] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 18:53:55,577 [10] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 18:54:03,381 [9] INFO  ServerLogger - Getting all raftings
+2025-09-17 18:54:49,339 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 18:55:12,601 [8] INFO  ServerLogger - No existing data file found for RaftingDto, starting with empty collection
+2025-09-17 18:55:20,907 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 18:56:41,752 [19] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:05:56,178 [9] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:07:27,347 [9] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-17 19:07:27,407 [9] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-17 19:10:41,215 [18] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:13:05,057 [18] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-17 19:13:05,088 [18] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-17 19:13:24,549 [20] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:14:20,631 [20] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-17 19:14:20,660 [20] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-17 19:18:37,932 [10] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:18:51,352 [10] INFO  ServerLogger - Successfully loaded 0 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 19:18:52,561 [10] INFO  ServerLogger - Loaded 0 RaftingDto entities from storage
+2025-09-17 19:19:26,089 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:19:50,738 [8] INFO  ServerLogger - Successfully loaded 0 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 19:19:59,341 [8] INFO  ServerLogger - Loaded 0 RaftingDto entities from storage
+2025-09-17 19:21:03,366 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:21:03,397 [8] INFO  ServerLogger - Successfully loaded 0 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 19:21:03,397 [8] INFO  ServerLogger - Loaded 0 RaftingDto entities from storage
+2025-09-17 19:21:03,397 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 19:21:09,510 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:21:09,793 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:21:12,700 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:21:12,842 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:22:05,459 [10] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:22:32,898 [10] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:23:12,181 [10] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:24:09,127 [19] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:25:55,301 [19] INFO  ServerLogger - Successfully loaded 0 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 19:31:58,119 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:33:26,370 [8] INFO  ServerLogger - Successfully loaded 0 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 19:34:17,999 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:38:54,091 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:38:54,119 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 19:38:54,119 [8] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-17 19:38:54,134 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 19:39:12,350 [15] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 19:39:12,389 [15] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 19:39:12,389 [15] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-17 19:39:12,389 [15] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 19:39:18,443 [15] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:39:18,735 [15] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:40:05,845 [13] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:40:06,257 [13] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:44:11,910 [44] INFO  ServerLogger - Getting all raftings
+2025-09-17 19:44:12,227 [44] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:08:36,824 [9] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 23:09:41,726 [9] INFO  ServerLogger - Successfully loaded 0 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:09:44,995 [9] INFO  ServerLogger - Loaded 0 RaftingDto entities from storage
+2025-09-17 23:10:35,453 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 23:10:54,022 [8] INFO  ServerLogger - Successfully loaded 0 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:11:12,361 [8] INFO  ServerLogger - Loaded 0 RaftingDto entities from storage
+2025-09-17 23:11:29,896 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 23:11:37,597 [9] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:12:12,276 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 23:12:51,586 [8] INFO  ServerLogger - Successfully loaded 0 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:12:54,396 [8] INFO  ServerLogger - Loaded 0 RaftingDto entities from storage
+2025-09-17 23:13:01,761 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 23:13:06,568 [10] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:17:46,253 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-17 23:17:46,294 [8] INFO  ServerLogger - Successfully loaded 2 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:17:46,295 [8] INFO  ServerLogger - Loaded 2 RaftingDto entities from storage
+2025-09-17 23:17:46,295 [8] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-17 23:17:53,537 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:17:53,850 [8] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:28,565 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:28,851 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:32,677 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:33,649 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:33,837 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:33,965 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:34,126 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:46,859 [42] INFO  ServerLogger - Changing rafting 1 state to Boarding
+2025-09-17 23:23:46,863 [42] INFO  ServerLogger - Updated RaftingDto entity with id 1
+2025-09-17 23:23:46,887 [42] INFO  ServerLogger - Successfully saved 2 items to C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:23:46,887 [42] INFO  ServerLogger - Saved 2 RaftingDto entities
+2025-09-17 23:23:46,887 [42] INFO  ServerLogger - Rafting 1 state changed from Planned to Boarding
+2025-09-17 23:23:47,581 [42] INFO  ServerLogger - Changing rafting 2 state to Boarding
+2025-09-17 23:23:47,581 [42] INFO  ServerLogger - Updated RaftingDto entity with id 2
+2025-09-17 23:23:47,585 [42] INFO  ServerLogger - Successfully saved 2 items to C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:23:47,585 [42] INFO  ServerLogger - Saved 2 RaftingDto entities
+2025-09-17 23:23:47,585 [42] INFO  ServerLogger - Rafting 2 state changed from Planned to Boarding
+2025-09-17 23:23:48,467 [42] INFO  ServerLogger - Changing rafting 2 state to Resting
+2025-09-17 23:23:48,467 [42] INFO  ServerLogger - Updated RaftingDto entity with id 2
+2025-09-17 23:23:48,483 [42] INFO  ServerLogger - Successfully saved 2 items to C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:23:48,483 [42] INFO  ServerLogger - Saved 2 RaftingDto entities
+2025-09-17 23:23:48,483 [42] INFO  ServerLogger - Rafting 2 state changed from Boarding to Resting
+2025-09-17 23:23:48,862 [42] INFO  ServerLogger - Changing rafting 1 state to Resting
+2025-09-17 23:23:48,862 [42] INFO  ServerLogger - Updated RaftingDto entity with id 1
+2025-09-17 23:23:48,862 [42] INFO  ServerLogger - Successfully saved 2 items to C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:23:48,862 [42] INFO  ServerLogger - Saved 2 RaftingDto entities
+2025-09-17 23:23:48,862 [42] INFO  ServerLogger - Rafting 1 state changed from Boarding to Resting
+2025-09-17 23:23:53,544 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:54,389 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:23:54,650 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:24:04,040 [42] INFO  ServerLogger - Changing rafting 1 state to Resting
+2025-09-17 23:24:04,042 [42] INFO  ServerLogger - Updated RaftingDto entity with id 1
+2025-09-17 23:24:04,044 [42] INFO  ServerLogger - Successfully saved 2 items to C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:24:04,044 [42] INFO  ServerLogger - Saved 2 RaftingDto entities
+2025-09-17 23:24:04,044 [42] INFO  ServerLogger - Rafting 1 state changed from Resting to Resting
+2025-09-17 23:24:06,339 [42] INFO  ServerLogger - Changing rafting 1 state to Finished
+2025-09-17 23:24:06,339 [42] INFO  ServerLogger - Updated RaftingDto entity with id 1
+2025-09-17 23:24:06,343 [42] INFO  ServerLogger - Successfully saved 2 items to C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-17 23:24:06,343 [42] INFO  ServerLogger - Saved 2 RaftingDto entities
+2025-09-17 23:24:06,343 [42] INFO  ServerLogger - Rafting 1 state changed from Resting to Finished
+2025-09-17 23:24:09,115 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:24:09,688 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:24:09,844 [42] INFO  ServerLogger - Getting all raftings
+2025-09-17 23:24:18,508 [42] INFO  ServerLogger - Getting all raftings
+2025-09-18 00:06:20,947 [50] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-18 00:06:20,979 [50] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-18 00:06:20,979 [50] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-18 00:06:20,979 [50] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-18 00:06:21,016 [50] INFO  ServerLogger - Getting all raftings
+2025-09-18 00:06:21,337 [50] INFO  ServerLogger - Getting all raftings
+2025-09-18 00:13:53,723 [66] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-18 00:13:53,761 [66] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-18 00:13:53,763 [66] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-18 00:13:53,763 [66] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-18 00:13:53,786 [66] INFO  ServerLogger - Getting all raftings
+2025-09-18 00:13:54,102 [66] INFO  ServerLogger - Getting all raftings
+2025-09-18 00:13:59,505 [66] INFO  ServerLogger - Getting all raftings
+2025-09-18 00:14:35,216 [45] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-18 00:14:35,267 [45] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-18 00:14:35,295 [45] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-18 00:14:35,585 [45] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-18 00:14:35,585 [45] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-18 00:14:46,711 [45] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-18 00:14:46,711 [45] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-18 00:15:15,414 [23] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-18 00:15:15,448 [23] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-18 00:15:15,448 [23] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-18 00:15:15,448 [23] INFO  ServerLogger - No existing data file found for LocationDto, starting with empty collection
+2025-09-18 00:15:15,480 [23] INFO  ServerLogger - Getting all raftings
+2025-09-18 00:15:15,776 [23] INFO  ServerLogger - Getting all raftings

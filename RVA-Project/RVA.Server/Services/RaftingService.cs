@@ -5,7 +5,6 @@ using RVA.Shared.Interfaces;
 using RVA.Server.Logging;
 using RVA.Shared.DTOs;
 using RVA.Shared.Enums;
-using RVA.Shared.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

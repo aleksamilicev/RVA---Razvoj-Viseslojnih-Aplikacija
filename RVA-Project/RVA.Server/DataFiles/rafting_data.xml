@@ -1,1 +1,1003 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRafting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Rafting>
+    <Id>1</Id>
+    <Name>Rafting 1</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-10-02T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>18</Distance>
+    <ParticipantCount>10</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-01T18:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>Medium</CurrentIntensity>
+    <CurrentSpeedKmh>4.5327067303157911</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Planned</CurrentState>
+    <GuideId>2</GuideId>
+    <PricePerPerson>448</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>2</StartLocationId>
+    <StartLocation>
+      <Id>2</Id>
+      <River>River 2</River>
+      <Latitude>43.627758116288</Latitude>
+      <Longitude>28.653056038847687</Longitude>
+      <Name>Location 2</Name>
+      <Description>Beautiful place 2</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>false</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>1</EndLocationId>
+    <EndLocation>
+      <Id>1</Id>
+      <River>River 1</River>
+      <Latitude>40.108910393951888</Latitude>
+      <Longitude>23.593263250586233</Longitude>
+      <Name>Location 1</Name>
+      <Description>Beautiful place 1</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>8</Id>
+        <Name>Clothing 8</Name>
+        <Type>LifeJacket</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>39</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-07T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>1</Id>
+        <Name>Clothing 1</Name>
+        <Type>Gloves</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>true</IsWaterproof>
+        <Size>43</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-29T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>8</Id>
+        <Name>Equipment 8</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-3936</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-06-13T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>9</Id>
+        <Name>Equipment 9</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-1897</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-04T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>2</Id>
+    <Name>Rafting 2</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-09-19T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>15</Distance>
+    <ParticipantCount>9</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-02T15:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>Medium</CurrentIntensity>
+    <CurrentSpeedKmh>2.263489450450749</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Planned</CurrentState>
+    <GuideId>3</GuideId>
+    <PricePerPerson>98</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>1</StartLocationId>
+    <StartLocation>
+      <Id>1</Id>
+      <River>River 1</River>
+      <Latitude>40.108910393951888</Latitude>
+      <Longitude>23.593263250586233</Longitude>
+      <Name>Location 1</Name>
+      <Description>Beautiful place 1</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>4</EndLocationId>
+    <EndLocation>
+      <Id>4</Id>
+      <River>River 4</River>
+      <Latitude>47.936269863478962</Latitude>
+      <Longitude>28.091796430801878</Longitude>
+      <Name>Location 4</Name>
+      <Description>Beautiful place 4</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>7</Id>
+        <Name>Clothing 7</Name>
+        <Type>Boots</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>37</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-04T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>2</Id>
+        <Name>Clothing 2</Name>
+        <Type>Wetsuit</Type>
+        <Material>Rubber</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>45</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-20T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>2</Id>
+        <Name>Equipment 2</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-3325</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-08T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>9</Id>
+        <Name>Equipment 9</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-1897</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-04T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>3</Id>
+    <Name>Rafting 3</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-10-06T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>18</Distance>
+    <ParticipantCount>8</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-04T15:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>High</CurrentIntensity>
+    <CurrentSpeedKmh>11.530340738375831</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Boarding</CurrentState>
+    <GuideId>3</GuideId>
+    <PricePerPerson>434</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>5</StartLocationId>
+    <StartLocation>
+      <Id>5</Id>
+      <River>River 5</River>
+      <Latitude>46.607673320270919</Latitude>
+      <Longitude>21.335869762737243</Longitude>
+      <Name>Location 5</Name>
+      <Description>Beautiful place 5</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>4</EndLocationId>
+    <EndLocation>
+      <Id>4</Id>
+      <River>River 4</River>
+      <Latitude>47.936269863478962</Latitude>
+      <Longitude>28.091796430801878</Longitude>
+      <Name>Location 4</Name>
+      <Description>Beautiful place 4</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>8</Id>
+        <Name>Clothing 8</Name>
+        <Type>LifeJacket</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>39</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-07T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>7</Id>
+        <Name>Clothing 7</Name>
+        <Type>Boots</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>37</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-04T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>10</Id>
+        <Name>Equipment 10</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-4749</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-13T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>5</Id>
+        <Name>Equipment 5</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-4600</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-13T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>4</Id>
+    <Name>Rafting 4</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-09-22T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>6</Distance>
+    <ParticipantCount>10</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-12T15:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>Extreme</CurrentIntensity>
+    <CurrentSpeedKmh>17.606449116769454</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Planned</CurrentState>
+    <GuideId>3</GuideId>
+    <PricePerPerson>343</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>4</StartLocationId>
+    <StartLocation>
+      <Id>4</Id>
+      <River>River 4</River>
+      <Latitude>47.936269863478962</Latitude>
+      <Longitude>28.091796430801878</Longitude>
+      <Name>Location 4</Name>
+      <Description>Beautiful place 4</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>1</EndLocationId>
+    <EndLocation>
+      <Id>1</Id>
+      <River>River 1</River>
+      <Latitude>40.108910393951888</Latitude>
+      <Longitude>23.593263250586233</Longitude>
+      <Name>Location 1</Name>
+      <Description>Beautiful place 1</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>10</Id>
+        <Name>Clothing 10</Name>
+        <Type>LifeJacket</Type>
+        <Material>PVC</Material>
+        <IsWaterproof>true</IsWaterproof>
+        <Size>49</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-20T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>2</Id>
+        <Name>Clothing 2</Name>
+        <Type>Wetsuit</Type>
+        <Material>Rubber</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>45</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-20T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>6</Id>
+        <Name>Equipment 6</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-6402</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-04T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>1</Id>
+        <Name>Equipment 1</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-2764</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-09-08T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>5</Id>
+    <Name>Rafting 5</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-10-02T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>10</Distance>
+    <ParticipantCount>8</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-03T17:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>Low</CurrentIntensity>
+    <CurrentSpeedKmh>6.5588815354550629</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Planned</CurrentState>
+    <GuideId>2</GuideId>
+    <PricePerPerson>133</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>4</StartLocationId>
+    <StartLocation>
+      <Id>4</Id>
+      <River>River 4</River>
+      <Latitude>47.936269863478962</Latitude>
+      <Longitude>28.091796430801878</Longitude>
+      <Name>Location 4</Name>
+      <Description>Beautiful place 4</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>2</EndLocationId>
+    <EndLocation>
+      <Id>2</Id>
+      <River>River 2</River>
+      <Latitude>43.627758116288</Latitude>
+      <Longitude>28.653056038847687</Longitude>
+      <Name>Location 2</Name>
+      <Description>Beautiful place 2</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>false</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>4</Id>
+        <Name>Clothing 4</Name>
+        <Type>Wetsuit</Type>
+        <Material>Rubber</Material>
+        <IsWaterproof>true</IsWaterproof>
+        <Size>44</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-07T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>5</Id>
+        <Name>Clothing 5</Name>
+        <Type>Helmet</Type>
+        <Material>Rubber</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>41</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-04T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>9</Id>
+        <Name>Equipment 9</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-1897</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-04T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>6</Id>
+        <Name>Equipment 6</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-6402</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-04T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>6</Id>
+    <Name>Rafting 6</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-10-15T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>17</Distance>
+    <ParticipantCount>5</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-09T18:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>Medium</CurrentIntensity>
+    <CurrentSpeedKmh>10.882902578861874</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Paddling</CurrentState>
+    <GuideId>4</GuideId>
+    <PricePerPerson>381</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>5</StartLocationId>
+    <StartLocation>
+      <Id>5</Id>
+      <River>River 5</River>
+      <Latitude>46.607673320270919</Latitude>
+      <Longitude>21.335869762737243</Longitude>
+      <Name>Location 5</Name>
+      <Description>Beautiful place 5</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>1</EndLocationId>
+    <EndLocation>
+      <Id>1</Id>
+      <River>River 1</River>
+      <Latitude>40.108910393951888</Latitude>
+      <Longitude>23.593263250586233</Longitude>
+      <Name>Location 1</Name>
+      <Description>Beautiful place 1</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>5</Id>
+        <Name>Clothing 5</Name>
+        <Type>Helmet</Type>
+        <Material>Rubber</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>41</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-04T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>3</Id>
+        <Name>Clothing 3</Name>
+        <Type>Boots</Type>
+        <Material>Nylon</Material>
+        <IsWaterproof>true</IsWaterproof>
+        <Size>47</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-19T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>6</Id>
+        <Name>Equipment 6</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-6402</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-04T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>10</Id>
+        <Name>Equipment 10</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-4749</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-13T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>7</Id>
+    <Name>Rafting 7</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-09-19T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>19</Distance>
+    <ParticipantCount>3</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-08T17:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>High</CurrentIntensity>
+    <CurrentSpeedKmh>6.0061487583472148</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Resting</CurrentState>
+    <GuideId>1</GuideId>
+    <PricePerPerson>110</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>2</StartLocationId>
+    <StartLocation>
+      <Id>2</Id>
+      <River>River 2</River>
+      <Latitude>43.627758116288</Latitude>
+      <Longitude>28.653056038847687</Longitude>
+      <Name>Location 2</Name>
+      <Description>Beautiful place 2</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>false</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>2</EndLocationId>
+    <EndLocation>
+      <Id>2</Id>
+      <River>River 2</River>
+      <Latitude>43.627758116288</Latitude>
+      <Longitude>28.653056038847687</Longitude>
+      <Name>Location 2</Name>
+      <Description>Beautiful place 2</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>false</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>6</Id>
+        <Name>Clothing 6</Name>
+        <Type>Gloves</Type>
+        <Material>Rubber</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>45</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-02T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>7</Id>
+        <Name>Clothing 7</Name>
+        <Type>Boots</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>37</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-04T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>4</Id>
+        <Name>Equipment 4</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-3750</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-08-10T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>3</Id>
+        <Name>Equipment 3</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-3997</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-19T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>8</Id>
+    <Name>Rafting 8</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-10-02T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>14</Distance>
+    <ParticipantCount>2</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-12T17:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>Extreme</CurrentIntensity>
+    <CurrentSpeedKmh>11.909869644748918</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Paddling</CurrentState>
+    <GuideId>3</GuideId>
+    <PricePerPerson>191</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>5</StartLocationId>
+    <StartLocation>
+      <Id>5</Id>
+      <River>River 5</River>
+      <Latitude>46.607673320270919</Latitude>
+      <Longitude>21.335869762737243</Longitude>
+      <Name>Location 5</Name>
+      <Description>Beautiful place 5</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>3</EndLocationId>
+    <EndLocation>
+      <Id>3</Id>
+      <River>River 3</River>
+      <Latitude>44.529646707014017</Latitude>
+      <Longitude>25.166689727998659</Longitude>
+      <Name>Location 3</Name>
+      <Description>Beautiful place 3</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>7</Id>
+        <Name>Clothing 7</Name>
+        <Type>Boots</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>37</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-04T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>1</Id>
+        <Name>Clothing 1</Name>
+        <Type>Gloves</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>true</IsWaterproof>
+        <Size>43</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-29T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>7</Id>
+        <Name>Equipment 7</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-5126</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-11T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>5</Id>
+        <Name>Equipment 5</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-4600</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-13T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>9</Id>
+    <Name>Rafting 9</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-10-07T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>17</Distance>
+    <ParticipantCount>9</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-11T15:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>Medium</CurrentIntensity>
+    <CurrentSpeedKmh>14.301864287956555</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Boarding</CurrentState>
+    <GuideId>3</GuideId>
+    <PricePerPerson>106</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>4</StartLocationId>
+    <StartLocation>
+      <Id>4</Id>
+      <River>River 4</River>
+      <Latitude>47.936269863478962</Latitude>
+      <Longitude>28.091796430801878</Longitude>
+      <Name>Location 4</Name>
+      <Description>Beautiful place 4</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>1</EndLocationId>
+    <EndLocation>
+      <Id>1</Id>
+      <River>River 1</River>
+      <Latitude>40.108910393951888</Latitude>
+      <Longitude>23.593263250586233</Longitude>
+      <Name>Location 1</Name>
+      <Description>Beautiful place 1</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>4</Id>
+        <Name>Clothing 4</Name>
+        <Type>Wetsuit</Type>
+        <Material>Rubber</Material>
+        <IsWaterproof>true</IsWaterproof>
+        <Size>44</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-09-07T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>2</Id>
+        <Name>Clothing 2</Name>
+        <Type>Wetsuit</Type>
+        <Material>Rubber</Material>
+        <IsWaterproof>false</IsWaterproof>
+        <Size>45</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-20T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>3</Id>
+        <Name>Equipment 3</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-3997</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-19T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>10</Id>
+        <Name>Equipment 10</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-4749</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-13T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+  <Rafting>
+    <Id>10</Id>
+    <Name>Rafting 10</Name>
+    <Description>Exciting rafting adventure</Description>
+    <StartTime>2025-09-19T13:27:25.554342+02:00</StartTime>
+    <Duration />
+    <Distance>7</Distance>
+    <ParticipantCount>1</ParticipantCount>
+    <MaxParticipants>12</MaxParticipants>
+    <EndTime>2025-10-10T18:27:25.554342+02:00</EndTime>
+    <CurrentIntensity>Extreme</CurrentIntensity>
+    <CurrentSpeedKmh>9.4426457721007271</CurrentSpeedKmh>
+    <Capacity>12</Capacity>
+    <CurrentState>Resting</CurrentState>
+    <GuideId>4</GuideId>
+    <PricePerPerson>245</PricePerPerson>
+    <WeatherConditions>Sunny</WeatherConditions>
+    <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+    <ModifiedDate>2025-09-17T13:27:25.554342+02:00</ModifiedDate>
+    <StartLocationId>2</StartLocationId>
+    <StartLocation>
+      <Id>2</Id>
+      <River>River 2</River>
+      <Latitude>43.627758116288</Latitude>
+      <Longitude>28.653056038847687</Longitude>
+      <Name>Location 2</Name>
+      <Description>Beautiful place 2</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>false</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </StartLocation>
+    <EndLocationId>4</EndLocationId>
+    <EndLocation>
+      <Id>4</Id>
+      <River>River 4</River>
+      <Latitude>47.936269863478962</Latitude>
+      <Longitude>28.091796430801878</Longitude>
+      <Name>Location 4</Name>
+      <Description>Beautiful place 4</Description>
+      <HasParking>false</HasParking>
+      <HasFacilities>true</HasFacilities>
+      <CreatedDate>2025-09-17T13:27:25.554342+02:00</CreatedDate>
+      <StartingRaftings />
+      <EndingRaftings />
+    </EndLocation>
+    <UsedClothing>
+      <Clothing>
+        <Id>9</Id>
+        <Name>Clothing 9</Name>
+        <Type>Helmet</Type>
+        <Material>Plastic</Material>
+        <IsWaterproof>true</IsWaterproof>
+        <Size>48</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-22T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+      <Clothing>
+        <Id>1</Id>
+        <Name>Clothing 1</Name>
+        <Type>Gloves</Type>
+        <Material>Fabric</Material>
+        <IsWaterproof>true</IsWaterproof>
+        <Size>43</Size>
+        <Brand>Generic</Brand>
+        <Color>Red</Color>
+        <IsAvailable>true</IsAvailable>
+        <LastCleaned>2025-08-29T13:27:25.554342+02:00</LastCleaned>
+        <Condition>Good</Condition>
+        <Raftings />
+      </Clothing>
+    </UsedClothing>
+    <UsedEquipment>
+      <Equipment>
+        <Id>3</Id>
+        <Name>Equipment 3</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-3997</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-19T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+      <Equipment>
+        <Id>5</Id>
+        <Name>Equipment 5</Name>
+        <Type>Standard</Type>
+        <IsAvailable>true</IsAvailable>
+        <SerialNumber>SN-4600</SerialNumber>
+        <Condition>Good</Condition>
+        <LastMaintenance>2025-07-13T13:27:25.554342+02:00</LastMaintenance>
+        <Raftings />
+      </Equipment>
+    </UsedEquipment>
+  </Rafting>
+</ArrayOfRafting>

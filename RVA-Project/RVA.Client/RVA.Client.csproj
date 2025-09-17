@@ -116,9 +116,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Helpers\DataSeeder.cs" />
     <Compile Include="Services\WcfServiceClient.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\RaftingListViewModel.cs" />
+    <Compile Include="Views\RaftingListView.xaml.cs">
+      <DependentUpon>RaftingListView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -131,6 +137,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\RaftingListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -161,12 +171,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapters\" />
-    <Folder Include="Commands\" />
     <Folder Include="Converters\" />
     <Folder Include="Logging\" />
     <Folder Include="Observers\" />
     <Folder Include="Validators\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RVA.Shared\RVA.Shared.csproj">

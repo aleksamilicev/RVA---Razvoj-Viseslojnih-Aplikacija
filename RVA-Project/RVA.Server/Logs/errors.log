@@ -1,0 +1,102 @@
+2025-09-17 19:07:27,347 [9] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-17 19:07:27,407 [9] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-17 19:13:05,057 [18] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-17 19:13:05,088 [18] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-17 19:14:20,631 [20] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-17 19:14:20,660 [20] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-18 00:14:35,267 [45] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-18 00:14:35,295 [45] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-18 00:14:35,585 [45] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-18 00:14:35,585 [45] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256
+2025-09-18 00:14:46,711 [45] ERROR ServerLogger - Error loading data from XML file C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+2025-09-18 00:14:46,711 [45] ERROR ServerLogger - Error loading RaftingDto entities from storage
+System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.xml ---> System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <ArrayOfRafting xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderList1.Read6_ArrayOfRaftingDto()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 84
+   --- End of inner exception stack trace ---
+   at RVA.Server.Storage.XmlStorage.LoadData[T](String filePath) in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Storage\XmlStorage.cs:line 92
+   at RVA.Server.Data.BaseRepository`1.LoadData() in C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\Data\BaseRepository.cs:line 256

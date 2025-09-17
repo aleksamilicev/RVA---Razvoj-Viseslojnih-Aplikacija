@@ -14,21 +14,21 @@ namespace RVA.Server.Factories
         public static RaftingRepository CreateRaftingRepository()
         {
             var logger = new ServerLogger();
-            var storage = StorageFactory.CreateStorage("xml", logger);
+            var storage = StorageFactory.CreateStorage("csv", logger);
             return new RaftingRepository(storage, logger);
         }
 
         public static LocationRepository CreateLocationRepository()
         {
             var logger = new ServerLogger();
-            var storage = StorageFactory.CreateStorage("xml", logger);
+            var storage = StorageFactory.CreateStorage("csv", logger);
             return new LocationRepository(storage, logger);
         }
 
         public static ClothingRepository CreateClothingRepository()
         {
             var logger = new ServerLogger();
-            var storage = StorageFactory.CreateStorage("xml", logger);
+            var storage = StorageFactory.CreateStorage("csv", logger);
             return new ClothingRepository(storage, logger);
         }
     }

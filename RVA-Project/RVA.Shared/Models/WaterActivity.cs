@@ -18,34 +18,5 @@ namespace RVA.Shared.Models
         // Dodatna polja
         public int ParticipantCount { get; set; }
         public int MaxParticipants { get; set; }
-
-
-
-        /* Prebaciti u RVA.Server/Services
-         * 
-         * 
-         * 
-        // Abstract metode
-        public abstract bool ValidateActivity();
-        public abstract TimeSpan CalculateDuration();
-
-        // Virtualne metode
-        public virtual void AddParticipant()
-        {
-            if (ParticipantCount < MaxParticipants)
-                ParticipantCount++;
-        }
-
-        public virtual void RemoveParticipant()
-        {
-            if (ParticipantCount > 0)
-                ParticipantCount--;
-        }
-
-        public virtual int GetRemainingCapacity()
-        {
-            return MaxParticipants - ParticipantCount;
-        }
-        */
     }
 }

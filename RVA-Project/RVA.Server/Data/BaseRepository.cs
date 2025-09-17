@@ -25,7 +25,9 @@ namespace RVA.Server.Data
             _entities = new List<T>();
             _dataStorage = dataStorage ?? throw new ArgumentNullException(nameof(dataStorage));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _filePath = $"DataFiles/{fileName}.{_dataStorage.FileExtension}";
+            _filePath = @"C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\" +
+            $"{fileName}.{_dataStorage.FileExtension}";
+
 
             LoadData();
         }

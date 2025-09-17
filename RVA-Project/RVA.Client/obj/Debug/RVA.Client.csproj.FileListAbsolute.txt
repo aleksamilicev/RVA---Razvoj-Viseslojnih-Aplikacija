@@ -46,12 +46,14 @@ C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Cl
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\bin\Debug\System.ValueTuple.xml
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\RVA.Client.csproj.AssemblyReference.cache
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\MainWindow.g.cs
+C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\Views\RaftingListView.g.cs
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\App.g.cs
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\RVA.Client_MarkupCompile.cache
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\RVA.Client_MarkupCompile.lref
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\App.baml
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\MainWindow.baml
+C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\Views\RaftingListView.baml
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\RVA.Client.g.resources
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\RVA.Client.Properties.Resources.resources
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\obj\Debug\RVA.Client.csproj.GenerateResource.cache

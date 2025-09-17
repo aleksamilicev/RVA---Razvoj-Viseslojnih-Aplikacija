@@ -4,49 +4,83 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RVA.Client.ViewModels"
+        xmlns:views="clr-namespace:RVA.Client.Views"
         mc:Ignorable="d"
-        Title="RVA Client - WCF Connection Test" Height="500" Width="900">
+        Title="RVA Client - Rafting Management System" Height="700" Width="1200">
+
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        <TabControl>
+            <!-- Connection Test Tab -->
+            <TabItem Header="Connection Test">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-        <!-- Header -->
-        <TextBlock Grid.Row="0" Text="WCF Service Connection Test" 
-                   FontSize="20" FontWeight="Bold" 
-                   HorizontalAlignment="Center" 
-                   Margin="20"/>
+                    <!-- Header -->
+                    <TextBlock Grid.Row="0" Text="WCF Service Connection Test" 
+                               FontSize="20" FontWeight="Bold" 
+                               HorizontalAlignment="Center" 
+                               Margin="20,10"/>
 
-        <!-- Main Content -->
-        <ScrollViewer Grid.Row="1" Margin="20">
-            <Border Background="#F5F5F5"
-                    Padding="10"
-                    BorderBrush="Gray"
-                    BorderThickness="1">
-                <TextBlock Text="{Binding ConnectionStatus}" 
-                           FontSize="12" 
-                           FontFamily="Consolas"
-                           TextWrapping="Wrap"/>
-            </Border>
-        </ScrollViewer>
+                    <!-- Main Content -->
+                    <ScrollViewer Grid.Row="1" Margin="20">
+                        <Border Background="#F5F5F5"
+                                Padding="10"
+                                BorderBrush="Gray"
+                                BorderThickness="1">
+                            <TextBlock Text="{Binding ConnectionStatus}" 
+                                       FontSize="12" 
+                                       FontFamily="Consolas"
+                                       TextWrapping="Wrap"/>
+                        </Border>
+                    </ScrollViewer>
 
-        <!-- Buttons -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" 
-                    HorizontalAlignment="Center" 
-                    Margin="20">
-            <Button Content="Quick Test" 
-                    Command="{Binding TestConnectionCommand}" 
-                    Width="120" Height="40" 
-                    Margin="5"/>
-            <Button Content="Detailed Test" 
-                    Command="{Binding DetailedTestCommand}" 
-                    Width="120" Height="40" 
-                    Margin="5"/>
-        </StackPanel>
+                    <!-- Buttons -->
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" 
+                                HorizontalAlignment="Center" 
+                                Margin="20">
+                        <Button Content="Quick Test" 
+                                Command="{Binding TestConnectionCommand}" 
+                                Width="120" Height="40" 
+                                Margin="5"/>
+                        <Button Content="Detailed Test" 
+                                Command="{Binding DetailedTestCommand}" 
+                                Width="120" Height="40" 
+                                Margin="5"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <!-- Rafting Management Tab -->
+            <TabItem Header="Rafting Management">
+                <views:RaftingListView>
+                    <views:RaftingListView.DataContext>
+                        <local:RaftingListViewModel/>
+                    </views:RaftingListView.DataContext>
+                </views:RaftingListView>
+            </TabItem>
+
+            <!-- Placeholder for future tabs -->
+            <TabItem Header="Location Management">
+                <TextBlock Text="Location management - coming soon..." 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center" 
+                           FontSize="16"/>
+            </TabItem>
+
+            <TabItem Header="Clothing Management">
+                <TextBlock Text="Clothing management - coming soon..." 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center" 
+                           FontSize="16"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

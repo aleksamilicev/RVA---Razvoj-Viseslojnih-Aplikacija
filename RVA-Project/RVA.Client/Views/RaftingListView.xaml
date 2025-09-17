@@ -1,0 +1,243 @@
+﻿<UserControl x:Class="RVA.Client.Views.RaftingListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RVA.Client.Views"
+             xmlns:enums="clr-namespace:RVA.Shared.Enums;assembly=RVA.Shared"
+             xmlns:conv="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200">
+
+    <UserControl.Resources>
+        <conv:BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <!-- Style for state indicators -->
+        <Style x:Key="StateIndicatorStyle" TargetType="Ellipse">
+            <Setter Property="Width" Value="10"/>
+            <Setter Property="Height" Value="10"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding CurrentState}" Value="Planned">
+                    <Setter Property="Fill" Value="Gray"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding CurrentState}" Value="Boarding">
+                    <Setter Property="Fill" Value="Orange"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding CurrentState}" Value="Paddling">
+                    <Setter Property="Fill" Value="Green"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding CurrentState}" Value="Resting">
+                    <Setter Property="Fill" Value="Yellow"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding CurrentState}" Value="Finished">
+                    <Setter Property="Fill" Value="Blue"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Text="Rafting Activities Management" 
+                   FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   Margin="20,10"/>
+
+        <!-- Toolbar -->
+        <Border Grid.Row="1" Background="#F0F0F0" BorderBrush="#CCCCCC" BorderThickness="0,1">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Filters Row -->
+                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Search:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <TextBox Width="200" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                             VerticalAlignment="Center" Margin="0,0,15,0"/>
+
+                    <TextBlock Text="Filter by State:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <ComboBox Width="120" SelectedItem="{Binding FilterState}" 
+                              VerticalAlignment="Center" Margin="0,0,15,0">
+                        <ComboBox.Items>
+                            <ComboBoxItem Content="All States" Tag="{x:Null}"/>
+                            <ComboBoxItem Content="Planned" Tag="{x:Static enums:RaftingState.Planned}"/>
+                            <ComboBoxItem Content="Boarding" Tag="{x:Static enums:RaftingState.Boarding}"/>
+                            <ComboBoxItem Content="Paddling" Tag="{x:Static enums:RaftingState.Paddling}"/>
+                            <ComboBoxItem Content="Resting" Tag="{x:Static enums:RaftingState.Resting}"/>
+                            <ComboBoxItem Content="Finished" Tag="{x:Static enums:RaftingState.Finished}"/>
+                        </ComboBox.Items>
+                    </ComboBox>
+
+                    <Button Content="Clear Filters" Command="{Binding ClearFiltersCommand}" 
+                            Margin="5,0" Padding="10,5"/>
+                </StackPanel>
+
+                <!-- Action Buttons Row -->
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                    <Button Content="Add New" Command="{Binding AddNewCommand}" 
+                            Background="#4CAF50" Foreground="White" 
+                            Margin="0,0,10,0" Padding="15,8" FontWeight="Bold"/>
+
+                    <Button Content="Edit" Command="{Binding EditCommand}" 
+                            Background="#2196F3" Foreground="White" 
+                            Margin="0,0,10,0" Padding="15,8"/>
+
+                    <Button Content="Delete" Command="{Binding DeleteCommand}" 
+                            Background="#F44336" Foreground="White" 
+                            Margin="0,0,10,0" Padding="15,8"/>
+
+                    <Button Content="View Details" Command="{Binding ViewDetailsCommand}" 
+                            Background="#FF9800" Foreground="White" 
+                            Margin="0,0,10,0" Padding="15,8"/>
+                </StackPanel>
+
+                <!-- Refresh Button -->
+                <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" 
+                        Content="🔄 Refresh" Command="{Binding RefreshCommand}" 
+                        VerticalAlignment="Center" Padding="10,8"/>
+            </Grid>
+        </Border>
+
+        <!-- Main Content - DataGrid -->
+        <DataGrid Grid.Row="2" 
+                  ItemsSource="{Binding RaftingsView}"
+                  SelectedItem="{Binding SelectedRafting}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  GridLinesVisibility="Horizontal"
+                  HeadersVisibility="Column"
+                  SelectionMode="Single"
+                  AlternatingRowBackground="#F9F9F9"
+                  Margin="10">
+
+            <DataGrid.Columns>
+                <!-- State Indicator -->
+                <DataGridTemplateColumn Header="State" Width="60" CanUserSort="True" SortMemberPath="CurrentState">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Ellipse Style="{StaticResource StateIndicatorStyle}"/>
+                                <TextBlock Text="{Binding CurrentState}" FontSize="10" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Name -->
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="150" CanUserSort="True"/>
+
+                <!-- Start Time -->
+                <DataGridTextColumn Header="Start Time" Binding="{Binding StartTime, StringFormat='dd/MM/yyyy HH:mm'}" 
+                                    Width="120" CanUserSort="True"/>
+
+                <!-- Duration -->
+                <DataGridTextColumn Header="Duration" Binding="{Binding Duration, StringFormat='hh\\:mm'}" 
+                                    Width="80" CanUserSort="True"/>
+
+                <!-- Distance -->
+                <DataGridTextColumn Header="Distance (km)" Binding="{Binding Distance, StringFormat='F1'}" 
+                                    Width="90" CanUserSort="True"/>
+
+                <!-- Participants -->
+                <DataGridTemplateColumn Header="Participants" Width="100" CanUserSort="True" SortMemberPath="ParticipantCount">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding ParticipantCount}"/>
+                                <Run Text="/"/>
+                                <Run Text="{Binding Capacity}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Price -->
+                <DataGridTextColumn Header="Price/Person" Binding="{Binding PricePerPerson, StringFormat='C'}" 
+                                    Width="100" CanUserSort="True"/>
+
+                <!-- Intensity -->
+                <DataGridTextColumn Header="Intensity" Binding="{Binding CurrentIntensity}" 
+                                    Width="80" CanUserSort="True"/>
+
+                <!-- Speed -->
+                <DataGridTextColumn Header="Speed (km/h)" Binding="{Binding CurrentSpeedKmh, StringFormat='F1'}" 
+                                    Width="90" CanUserSort="True"/>
+
+                <!-- Weather -->
+                <DataGridTextColumn Header="Weather" Binding="{Binding WeatherConditions}" 
+                                    Width="100" CanUserSort="True"/>
+
+                <!-- Actions -->
+                <DataGridTemplateColumn Header="Actions" Width="150" CanUserResize="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="▶" ToolTip="Start" Margin="2" Padding="5,2"
+                                        Command="{Binding DataContext.ChangeStateCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                        CommandParameter="Boarding" FontSize="12"/>
+                                <Button Content="⏸" ToolTip="Rest" Margin="2" Padding="5,2"
+                                        Command="{Binding DataContext.ChangeStateCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                        CommandParameter="Resting" FontSize="12"/>
+                                <Button Content="⏹" ToolTip="Finish" Margin="2" Padding="5,2"
+                                        Command="{Binding DataContext.ChangeStateCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                        CommandParameter="Finished" FontSize="12"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+            <!-- Context Menu -->
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Edit" Command="{Binding EditCommand}"/>
+                    <MenuItem Header="View Details" Command="{Binding ViewDetailsCommand}"/>
+                    <Separator/>
+                    <MenuItem Header="Change State">
+                        <MenuItem Header="Planned" Command="{Binding ChangeStateCommand}" CommandParameter="Planned"/>
+                        <MenuItem Header="Boarding" Command="{Binding ChangeStateCommand}" CommandParameter="Boarding"/>
+                        <MenuItem Header="Paddling" Command="{Binding ChangeStateCommand}" CommandParameter="Paddling"/>
+                        <MenuItem Header="Resting" Command="{Binding ChangeStateCommand}" CommandParameter="Resting"/>
+                        <MenuItem Header="Finished" Command="{Binding ChangeStateCommand}" CommandParameter="Finished"/>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Delete" Command="{Binding DeleteCommand}"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+
+        <!-- Status Bar -->
+        <Border Grid.Row="3" Background="#E0E0E0" BorderBrush="#CCCCCC" BorderThickness="0,1,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="{Binding StatusMessage}" 
+                           VerticalAlignment="Center" Margin="10,5"/>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,5">
+                    <ProgressBar Width="100" Height="15" IsIndeterminate="{Binding IsLoading}" 
+                            Visibility="{Binding IsLoading, Converter={StaticResource BoolToVis}}"/>
+                    <TextBlock Text="Loading..." Margin="5,0" 
+                            Visibility="{Binding IsLoading, Converter={StaticResource BoolToVis}}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

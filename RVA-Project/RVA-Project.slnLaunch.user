@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "RVA.Server\\RVA.Server.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "RVA.Client\\RVA.Client.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

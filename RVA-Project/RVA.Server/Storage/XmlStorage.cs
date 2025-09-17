@@ -121,8 +121,19 @@ namespace RVA.Server.Storage
 
         public bool FileExists(string filePath)
         {
-            return File.Exists(filePath);
+            try
+            {
+                var fullPath = Path.GetFullPath(filePath);
+                _logger.Debug($"Checking if file exists: {filePath}, FullPath: {fullPath}");
+                return File.Exists(filePath);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error($"Error checking file existence for {filePath}", ex);
+                return false;
+            }
         }
+
 
         public void DeleteFile(string filePath)
         {

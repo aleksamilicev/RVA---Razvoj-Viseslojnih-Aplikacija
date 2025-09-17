@@ -29,6 +29,8 @@ namespace RVA.Client.ViewModels
 
         public MainViewModel()
         {
+            /* Bio je neki bug, pa sam rucno prebacio kreirane fajlove u DataFiles folder
+             *
             // 1. Generiši testne podatke
             string dataDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DataFiles");
             try
@@ -40,6 +42,7 @@ namespace RVA.Client.ViewModels
             {
                 ConnectionStatus = $"Error generating test data: {ex.Message}";
             }
+            */
 
             // 2. Inicijalizuj WCF servis
             _serviceClient = new WcfServiceClient();
