@@ -34,17 +34,17 @@ namespace RVA.Server.Data
 
         public virtual IEnumerable<T> GetAll()
         {
-            try
-            {
-                _logger.Debug($"Getting all {typeof(T).Name} entities");
-                return _entities.ToList();
-            }
-            catch (Exception ex)
-            {
-                _logger.Error($"Error getting all {typeof(T).Name} entities", ex);
-                throw new RepositoryException($"Error retrieving {typeof(T).Name} entities", ex);
-            }
+            _logger.Debug($"Getting all {typeof(T).Name} entities");
+
+            // Učitaj direktno iz storage svaki put
+            var freshEntities = _dataStorage.LoadData<T>(_filePath).ToList();
+            _entities.Clear();
+            _entities.AddRange(freshEntities);
+
+            return freshEntities;
         }
+
+
 
         public virtual T GetById(int id)
         {

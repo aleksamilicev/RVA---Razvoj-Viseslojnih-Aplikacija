@@ -67,14 +67,16 @@
                 </views:RaftingListView>
             </TabItem>
 
-            <!-- Placeholder for future tabs -->
+            <!-- Location Management Tab -->
             <TabItem Header="Location Management">
-                <TextBlock Text="Location management - coming soon..." 
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Center" 
-                           FontSize="16"/>
+                <views:LocationListView>
+                    <views:LocationListView.DataContext>
+                        <local:LocationListViewModel/>
+                    </views:LocationListView.DataContext>
+                </views:LocationListView>
             </TabItem>
 
+            <!-- Placeholder for future tabs -->
             <TabItem Header="Clothing Management">
                 <TextBlock Text="Clothing management - coming soon..." 
                            HorizontalAlignment="Center" 
