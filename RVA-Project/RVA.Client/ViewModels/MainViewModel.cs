@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using MvvmHelpers;
-using RVA.Client.Helpers;
+//using RVA.Client.Helpers;
 using RVA.Client.Services;
 using System;
 using System.IO;

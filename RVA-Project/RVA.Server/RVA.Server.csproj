@@ -144,6 +144,7 @@
     <Content Include="DataFiles\rafting_data.csv" />
     <Content Include="DataFiles\rafting_data.json" />
     <Content Include="DataFiles\location_data.csv" />
+    <Content Include="DataFiles\clothing_data.csv" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

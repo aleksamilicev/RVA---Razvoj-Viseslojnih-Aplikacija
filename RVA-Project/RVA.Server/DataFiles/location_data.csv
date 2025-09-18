@@ -7,5 +7,5 @@ Id,River,Latitude,Longitude,Name,Description,HasParking,HasFacilities,CreatedDat
 6,Morava,43.7412,21.4330,Cuprija,"Popularno mesto za rekreativne sportove na Moravi.",true,true,2023-09-15
 7,Tara,43.9493,19.3337,Nacionalni Park Tara,"Jedna od najlepsih destinacija u Srbiji za rafting i planinarenje.",true,true,2023-10-10
 8,Drina,43.8642,19.2912,Perucac,"Lokacija uz hidroelektranu, polazna tacka za splavarenje.",true,false,2023-10-25
-9,Gradac,44.2835,19.9321,Klisura reke Gradac,"Zastiæeni prirodni rezervat, popularan za izlete.",false,false,2023-11-05
+9,Gradac,44.2835,19.9321,Klisura reke Gradac,"Zasticeni prirodni rezervat, popularan za izlete.",false,false,2023-11-05
 10,Tisa,45.3886,20.4295,Becej,"Polazna tacka za rafting i voznju camcima na Tisi.",true,true,2023-12-01

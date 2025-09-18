@@ -120,9 +120,13 @@
     <Compile Include="Helpers\DataSeeder.cs" />
     <Compile Include="Services\WcfServiceClient.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\ClothingListViewModel.cs" />
     <Compile Include="ViewModels\LocationListViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RaftingListViewModel.cs" />
+    <Compile Include="Views\ClothingListView.xaml.cs">
+      <DependentUpon>ClothingListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LocationListView.xaml.cs">
       <DependentUpon>LocationListView.xaml</DependentUpon>
     </Compile>
@@ -141,6 +145,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ClothingListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LocationListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

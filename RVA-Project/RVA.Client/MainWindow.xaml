@@ -76,12 +76,13 @@
                 </views:LocationListView>
             </TabItem>
 
-            <!-- Placeholder for future tabs -->
+            <!-- Clothing Management Tab -->
             <TabItem Header="Clothing Management">
-                <TextBlock Text="Clothing management - coming soon..." 
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Center" 
-                           FontSize="16"/>
+                <views:ClothingListView>
+                    <views:ClothingListView.DataContext>
+                        <local:ClothingListViewModel/>
+                    </views:ClothingListView.DataContext>
+                </views:ClothingListView>
             </TabItem>
         </TabControl>
     </Grid>

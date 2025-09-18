@@ -1,0 +1,270 @@
+﻿<UserControl x:Class="RVA.Client.Views.ClothingListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RVA.Client.Views"
+             xmlns:enums="clr-namespace:RVA.Shared.Enums;assembly=RVA.Shared"
+             xmlns:conv="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1400">
+
+    <UserControl.Resources>
+        <conv:BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <!-- Style for availability indicators -->
+        <Style x:Key="AvailabilityIndicatorStyle" TargetType="Ellipse">
+            <Setter Property="Width" Value="10"/>
+            <Setter Property="Height" Value="10"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsAvailable}" Value="True">
+                    <Setter Property="Fill" Value="Green"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsAvailable}" Value="False">
+                    <Setter Property="Fill" Value="Red"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Style for waterproof indicators -->
+        <Style x:Key="WaterproofIndicatorStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsWaterproof}" Value="True">
+                    <Setter Property="Text" Value="💧"/>
+                    <Setter Property="Foreground" Value="Blue"/>
+                    <Setter Property="ToolTip" Value="Waterproof"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsWaterproof}" Value="False">
+                    <Setter Property="Text" Value=""/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Text="Clothing Equipment Management" 
+                   FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   Margin="20,10"/>
+
+        <!-- Toolbar -->
+        <Border Grid.Row="1" Background="#F0F0F0" BorderBrush="#CCCCCC" BorderThickness="0,1">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Filters Row -->
+                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Search:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <TextBox Width="180" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                             VerticalAlignment="Center" Margin="0,0,10,0"/>
+
+                    <TextBlock Text="Type:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <ComboBox Width="100" SelectedItem="{Binding FilterType}" 
+                              VerticalAlignment="Center" Margin="0,0,10,0">
+                        <ComboBox.Items>
+                            <ComboBoxItem Content="All" Tag="{x:Null}"/>
+                            <ComboBoxItem Content="Wetsuit" Tag="{x:Static enums:ClothingType.Wetsuit}"/>
+                            <ComboBoxItem Content="Life Jacket" Tag="{x:Static enums:ClothingType.LifeJacket}"/>
+                            <ComboBoxItem Content="Helmet" Tag="{x:Static enums:ClothingType.Helmet}"/>
+                            <ComboBoxItem Content="Boots" Tag="{x:Static enums:ClothingType.Boots}"/>
+                            <ComboBoxItem Content="Paddle" Tag="{x:Static enums:ClothingType.Paddle}"/>
+                            <ComboBoxItem Content="Gloves" Tag="{x:Static enums:ClothingType.Gloves}"/>
+                        </ComboBox.Items>
+                    </ComboBox>
+
+                    <TextBlock Text="Available:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <ComboBox Width="80" SelectedItem="{Binding FilterIsAvailable}" 
+                              VerticalAlignment="Center" Margin="0,0,10,0">
+                        <ComboBox.Items>
+                            <ComboBoxItem Content="All" Tag="{x:Null}"/>
+                            <ComboBoxItem Content="Yes" Tag="True"/>
+                            <ComboBoxItem Content="No" Tag="False"/>
+                        </ComboBox.Items>
+                    </ComboBox>
+
+                    <TextBlock Text="Waterproof:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <ComboBox Width="80" SelectedItem="{Binding FilterIsWaterproof}" 
+                              VerticalAlignment="Center" Margin="0,0,10,0">
+                        <ComboBox.Items>
+                            <ComboBoxItem Content="All" Tag="{x:Null}"/>
+                            <ComboBoxItem Content="Yes" Tag="True"/>
+                            <ComboBoxItem Content="No" Tag="False"/>
+                        </ComboBox.Items>
+                    </ComboBox>
+
+                    <Button Content="Clear" Command="{Binding ClearFiltersCommand}" 
+                            Margin="5,0" Padding="8,5"/>
+                </StackPanel>
+
+                <!-- Action Buttons Row -->
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                    <Button Content="Add New" Command="{Binding AddNewCommand}" 
+                            Background="#4CAF50" Foreground="White" 
+                            Margin="0,0,10,0" Padding="12,6" FontWeight="Bold"/>
+
+                    <Button Content="Edit" Command="{Binding EditCommand}" 
+                            Background="#2196F3" Foreground="White" 
+                            Margin="0,0,10,0" Padding="12,6"/>
+
+                    <Button Content="Delete" Command="{Binding DeleteCommand}" 
+                            Background="#F44336" Foreground="White" 
+                            Margin="0,0,10,0" Padding="12,6"/>
+
+                    <Button Content="View Details" Command="{Binding ViewDetailsCommand}" 
+                            Background="#FF9800" Foreground="White" 
+                            Margin="0,0,10,0" Padding="12,6"/>
+
+                    <Button Content="Mark as Used" Command="{Binding MarkAsUsedCommand}" 
+                            Background="#9C27B0" Foreground="White" 
+                            Margin="0,0,10,0" Padding="12,6"/>
+
+                    <Button Content="Mark as Available" Command="{Binding MarkAsAvailableCommand}" 
+                            Background="#4CAF50" Foreground="White" 
+                            Margin="0,0,10,0" Padding="12,6"/>
+                </StackPanel>
+
+                <!-- Refresh Button -->
+                <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" 
+                        Content="🔄 Refresh" Command="{Binding RefreshCommand}" 
+                        VerticalAlignment="Center" Padding="10,8"/>
+            </Grid>
+        </Border>
+
+        <!-- Main Content - DataGrid -->
+        <DataGrid Grid.Row="2" 
+                  ItemsSource="{Binding ClothingView}"
+                  SelectedItem="{Binding SelectedClothing}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  GridLinesVisibility="Horizontal"
+                  HeadersVisibility="Column"
+                  SelectionMode="Single"
+                  AlternatingRowBackground="#F9F9F9"
+                  Margin="10">
+
+            <DataGrid.Columns>
+                <!-- Availability Indicator -->
+                <DataGridTemplateColumn Header="Status" Width="60" CanUserSort="True" SortMemberPath="IsAvailable">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Ellipse Style="{StaticResource AvailabilityIndicatorStyle}"/>
+                                <CheckBox IsChecked="{Binding IsAvailable}" IsEnabled="False" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Name -->
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="120" CanUserSort="True"/>
+
+                <!-- Type -->
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="80" CanUserSort="True"/>
+
+                <!-- Size -->
+                <DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="50" CanUserSort="True"/>
+
+                <!-- Brand -->
+                <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" Width="100" CanUserSort="True"/>
+
+                <!-- Color -->
+                <DataGridTextColumn Header="Color" Binding="{Binding Color}" Width="80" CanUserSort="True"/>
+
+                <!-- Material -->
+                <DataGridTextColumn Header="Material" Binding="{Binding Material}" Width="90" CanUserSort="True"/>
+
+                <!-- Waterproof -->
+                <DataGridTemplateColumn Header="💧" Width="35" CanUserSort="True" SortMemberPath="IsWaterproof">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Style="{StaticResource WaterproofIndicatorStyle}" 
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Condition -->
+                <DataGridTextColumn Header="Condition" Binding="{Binding Condition}" Width="80" CanUserSort="True"/>
+
+                <!-- Last Cleaned -->
+                <DataGridTextColumn Header="Last Cleaned" Binding="{Binding LastCleaned, StringFormat='dd/MM/yy'}" 
+                                    Width="90" CanUserSort="True"/>
+
+                <!-- Actions -->
+                <DataGridTemplateColumn Header="Actions" Width="120" CanUserResize="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="🔴" ToolTip="Mark as Used" Margin="2" Padding="4,2" FontSize="11"
+                                        Command="{Binding DataContext.MarkAsUsedCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                        IsEnabled="{Binding IsAvailable}"/>
+                                <Button Content="🟢" ToolTip="Mark as Available" Margin="2" Padding="4,2" FontSize="11"
+                                        Command="{Binding DataContext.MarkAsAvailableCommand, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsAvailable}" Value="True">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+            <!-- Context Menu -->
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Edit" Command="{Binding EditCommand}"/>
+                    <MenuItem Header="View Details" Command="{Binding ViewDetailsCommand}"/>
+                    <Separator/>
+                    <MenuItem Header="Mark as Used" Command="{Binding MarkAsUsedCommand}"/>
+                    <MenuItem Header="Mark as Available" Command="{Binding MarkAsAvailableCommand}"/>
+                    <Separator/>
+                    <MenuItem Header="Delete" Command="{Binding DeleteCommand}"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+
+        <!-- Status Bar -->
+        <Border Grid.Row="3" Background="#E0E0E0" BorderBrush="#CCCCCC" BorderThickness="0,1,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="{Binding StatusMessage}" 
+                           VerticalAlignment="Center" Margin="10,5"/>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,5">
+                    <ProgressBar Width="100" Height="15" IsIndeterminate="{Binding IsLoading}" 
+                            Visibility="{Binding IsLoading, Converter={StaticResource BoolToVis}}"/>
+                    <TextBlock Text="Loading..." Margin="5,0" 
+                            Visibility="{Binding IsLoading, Converter={StaticResource BoolToVis}}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

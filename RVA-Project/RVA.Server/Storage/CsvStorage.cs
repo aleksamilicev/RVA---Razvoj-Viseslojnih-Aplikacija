@@ -55,8 +55,10 @@ namespace RVA.Server.Storage
                     var values = properties.Select(prop =>
                     {
                         var value = prop.GetValue(item);
-                        return EscapeCsvValue(FormatValueForCsv(value));
+                        string formatted = FormatValueForCsv(value);
+                        return EscapeCsvValue(formatted);
                     });
+
                     lines.Add(string.Join(CSV_SEPARATOR, values));
                 }
 
@@ -69,6 +71,7 @@ namespace RVA.Server.Storage
                 throw new Exception($"Failed to save data to CSV file: {filePath}", ex);
             }
         }
+
 
         public void SaveSingleEntity<T>(T entity, string filePath) where T : class
         {

@@ -25,53 +25,5 @@ namespace RVA.Shared.Models
 
         // Navigation properties
         public List<Rafting> Raftings { get; set; } = new List<Rafting>();
-
-
-
-        /* Prebaciti u RVA.Server/Services
-         * 
-         * 
-         * 
-        // Metode
-        public bool ValidateSize()
-        {
-            return Size > 0 && Size <= 60; // Veličine od 1 do 60
-        }
-
-        public void MarkAsUsed()
-        {
-            IsAvailable = false;
-            LastCleaned = DateTime.Now.AddDays(-1); // Označava da treba pranje
-        }
-
-        public void MarkAsAvailable()
-        {
-            IsAvailable = true;
-            LastCleaned = DateTime.Now;
-        }
-
-        public void UpdateCondition(string newCondition)
-        {
-            Condition = newCondition;
-        }
-
-        public Clothing Clone()
-        {
-            return new Clothing
-            {
-                Id = this.Id,
-                Name = this.Name,
-                Type = this.Type,
-                Material = this.Material,
-                IsWaterproof = this.IsWaterproof,
-                Size = this.Size,
-                Brand = this.Brand,
-                Color = this.Color,
-                IsAvailable = this.IsAvailable,
-                LastCleaned = this.LastCleaned,
-                Condition = this.Condition
-            };
-        }
-        */
     }
 }

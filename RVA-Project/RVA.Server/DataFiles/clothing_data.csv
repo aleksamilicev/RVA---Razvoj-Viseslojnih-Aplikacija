@@ -1,0 +1,11 @@
+Id,Name,Type,Material,IsWaterproof,Size,Brand,Color,IsAvailable,LastCleaned,Condition
+1,Life Jacket,Jacket,Polyester,true,42,Yamaha,Red,true,2025-09-01,Good
+2,Wetsuit,Suit,Neoprene,true,38,O'Neill,Black,true,2025-08-20,Good
+3,Helmet,Helmet,Plastic,false,58,ProTec,Yellow,true,2025-09-10,Excellent
+4,Gloves,Gloves,Nylon,false,9,Northwave,Blue,true,2025-07-15,Fair
+5,Raincoat,Jacket,Polyester,true,44,Columbia,Green,true,2025-08-30,Good
+6,Water Shoes,Shoes,Rubber,true,43,Adidas,Black,true,2025-09-05,Excellent
+7,T-Shirt,Shirt,Cotton,false,40,Nike,White,true,2025-09-12,Good
+8,Shorts,Shorts,Polyester,false,34,Reebok,Gray,true,2025-09-03,Good
+9,Backpack,Other,Canvas,false,0,Deuter,DarkBlue,false,2025-06-25,Poor
+10,Cap,Hat,Cotton,false,58,Puma,Red,true,2025-09-14,Good
