@@ -1,0 +1,11 @@
+Id,River,Latitude,Longitude,Name,Description,HasParking,HasFacilities,CreatedDate
+1,Drina,44.3652,19.1195,Bajina Basta,"Popularno mesto za rafting na Drini.",true,true,2023-05-14
+2,Lim,43.3850,19.6532,Prijepolje,"Polazna tacka za rafting Limom.",true,false,2023-06-20
+3,Ibar,43.7306,20.6897,Kraljevo,"Mesto okupljanja za sportske aktivnosti na Ibru.",false,true,2023-07-05
+4,Djetinja,43.8470,19.8429,Uzice,"Reka pogodna za krace rafting ture.",true,false,2023-08-12
+5,Kolubara,44.2756,20.0089,Valjevo,"Lokacija uz reku Kolubaru, pogodna za odmor i rekreaciju.",false,false,2023-09-01
+6,Morava,43.7412,21.4330,Cuprija,"Popularno mesto za rekreativne sportove na Moravi.",true,true,2023-09-15
+7,Tara,43.9493,19.3337,Nacionalni Park Tara,"Jedna od najlepsih destinacija u Srbiji za rafting i planinarenje.",true,true,2023-10-10
+8,Drina,43.8642,19.2912,Perucac,"Lokacija uz hidroelektranu, polazna tacka za splavarenje.",true,false,2023-10-25
+9,Gradac,44.2835,19.9321,Klisura reke Gradac,"Zasticeni prirodni rezervat, popularan za izlete.",false,false,2023-11-05
+10,Tisa,45.3886,20.4295,Becej,"Polazna tacka za rafting i voznju camcima na Tisi.",true,true,2023-12-01

@@ -1,13 +1,14 @@
 ﻿using RVA.Client.Commands;
 using RVA.Client.Services;
+using RVA.Client.Views;
 using RVA.Shared.DTOs;
 using RVA.Shared.Enums;
 using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Input;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Threading;
 
 namespace RVA.Client.ViewModels
@@ -183,16 +184,20 @@ namespace RVA.Client.ViewModels
 
         private void AddNewRafting()
         {
-            // TODO: Navigate to Add/Edit view with new rafting
-            StatusMessage = "Add new rafting functionality - to be implemented";
+            var window = new RaftingAddEditView();
+            window.DataContext = new RaftingAddEditViewModel(_serviceClient);
+            window.ShowDialog();
+            LoadRaftings();
         }
 
         private void EditRafting()
         {
             if (SelectedRafting == null) return;
 
-            // TODO: Navigate to Add/Edit view with selected rafting
-            StatusMessage = $"Edit rafting: {SelectedRafting.Name} - to be implemented";
+            var window = new RaftingAddEditView();
+            window.DataContext = new RaftingAddEditViewModel(_serviceClient, SelectedRafting);
+            window.ShowDialog();
+            LoadRaftings();
         }
 
         private async void DeleteRafting()
