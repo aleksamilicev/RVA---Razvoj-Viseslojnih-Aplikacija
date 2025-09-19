@@ -4,3 +4,4 @@ Id,Name,Type,Material,IsWaterproof,Size,Brand,Color,IsAvailable,LastCleaned,Cond
 3,Whitewater Helmet,Helmet,Neoprene,False,58,Sweet,Blue,False,2023-12-20T00:00:00.0000000,Fair
 4,Neoprene Boots 5mm,Boots,Neoprene,True,41,Cressi,Black,True,2024-01-12T00:00:00.0000000,Good
 5,Carbon Paddle,Paddle,Neoprene,False,0,Werner,Yellow,True,2024-01-08T00:00:00.0000000,Excellent
+6,test,Gloves,Nylon,True,37,Gucci,Purple,True,2025-09-19T22:43:54.7069319,Excellent

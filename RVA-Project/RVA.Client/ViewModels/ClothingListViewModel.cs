@@ -1,13 +1,14 @@
 ﻿using RVA.Client.Commands;
 using RVA.Client.Services;
+using RVA.Client.Views;
 using RVA.Shared.DTOs;
 using RVA.Shared.Enums;
 using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Input;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Threading;
 
 namespace RVA.Client.ViewModels
@@ -211,16 +212,47 @@ namespace RVA.Client.ViewModels
 
         private void AddNewClothing()
         {
-            // TODO: Navigate to Add/Edit view with new clothing
-            StatusMessage = "Add new clothing functionality - to be implemented";
+            OpenAddEditDialog();
         }
+
+        private void OpenAddEditDialog(ClothingDto clothingToEdit = null)
+        {
+            try
+            {
+                var viewModel = new ClothingAddEditViewModel(_serviceClient, clothingToEdit);
+                var dialog = new ClothingAddEditView { DataContext = viewModel };
+
+                // Subscribe to save event
+                viewModel.ClothingSaved += (sender, savedClothing) =>
+                {
+                    if (clothingToEdit == null)
+                    {
+                        // Adding new
+                        Clothing.Add(savedClothing);
+                        StatusMessage = $"Clothing '{savedClothing.Name}' added successfully.";
+                    }
+                    else
+                    {
+                        // Editing existing - refresh the list
+                        LoadClothing();
+                        StatusMessage = $"Clothing '{savedClothing.Name}' updated successfully.";
+                    }
+                    dialog.DialogResult = true;
+                };
+
+                dialog.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Error opening add/edit dialog: {ex.Message}";
+            }
+        }
+
 
         private void EditClothing()
         {
             if (SelectedClothing == null) return;
-
-            // TODO: Navigate to Add/Edit view with selected clothing
-            StatusMessage = $"Edit clothing: {SelectedClothing.Name} - to be implemented";
+            OpenAddEditDialog(SelectedClothing);
         }
 
         private async void DeleteClothing()

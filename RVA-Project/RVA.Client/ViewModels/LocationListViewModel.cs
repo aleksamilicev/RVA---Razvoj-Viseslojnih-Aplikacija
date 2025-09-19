@@ -1,13 +1,14 @@
 ﻿using RVA.Client.Commands;
 using RVA.Client.Services;
+using RVA.Client.Views;
 using RVA.Shared.DTOs;
 using RVA.Shared.Enums;
 using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Input;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Data;
+using System.Windows.Input;
 
 namespace RVA.Client.ViewModels
 {
@@ -157,16 +158,46 @@ namespace RVA.Client.ViewModels
 
         private void AddNewLocation()
         {
-            // TODO: Navigate to Add/Edit view with new location
-            StatusMessage = "Add new location functionality - to be implemented";
+            OpenAddEditDialog();
+        }
+
+        private void OpenAddEditDialog(LocationDto locationToEdit = null)
+        {
+            try
+            {
+                var viewModel = new LocationAddEditViewModel(_serviceClient, locationToEdit);
+                var dialog = new LocationAddEditView { DataContext = viewModel };
+
+                // Subscribe to save event
+                viewModel.LocationSaved += (sender, savedLocation) =>
+                {
+                    if (locationToEdit == null)
+                    {
+                        // Adding new
+                        Locations.Add(savedLocation);
+                        StatusMessage = $"Location '{savedLocation.Name}' added successfully.";
+                    }
+                    else
+                    {
+                        // Editing existing - refresh the list
+                        LoadLocations();
+                        StatusMessage = $"Location '{savedLocation.Name}' updated successfully.";
+                    }
+                    dialog.DialogResult = true;
+                };
+
+                dialog.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Error opening add/edit dialog: {ex.Message}";
+            }
         }
 
         private void EditLocation()
         {
             if (SelectedLocation == null) return;
-
-            // TODO: Navigate to Add/Edit view with selected location
-            StatusMessage = $"Edit location: {SelectedLocation.Name} - to be implemented";
+            OpenAddEditDialog(SelectedLocation);
         }
 
         private async void DeleteLocation()

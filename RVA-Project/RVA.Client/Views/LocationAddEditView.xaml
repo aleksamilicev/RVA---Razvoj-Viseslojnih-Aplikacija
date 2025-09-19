@@ -1,0 +1,216 @@
+﻿<Window x:Class="RVA.Client.Views.LocationAddEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:RVA.Client.Converters"
+        Title="{Binding WindowTitle}" 
+        Height="600" Width="500" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterOwner">
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        <local:BoolToSaveTextConverter x:Key="BoolToSaveTextConverter"/>
+        <local:DoubleToStringConverter x:Key="DoubleToStringConverter"/>
+
+        <!-- Error text style -->
+        <Style x:Key="ErrorTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Margin" Value="0,2,0,5"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+
+        <!-- Input field style -->
+        <Style x:Key="InputFieldStyle" TargetType="Control">
+            <Setter Property="Margin" Value="0,0,0,3"/>
+            <Setter Property="Padding" Value="5"/>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="BorderBrush" Value="Red"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Text="{Binding WindowTitle}" 
+                   FontSize="20" FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,0,20"/>
+
+        <!-- Form Content -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <!-- Basic Information -->
+                <GroupBox Header="Basic Information" Margin="0,0,0,15" Padding="15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Name -->
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Name*:" VerticalAlignment="Center"/>
+                        <StackPanel Grid.Row="0" Grid.Column="1">
+                            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" 
+                                     Style="{StaticResource InputFieldStyle}"/>
+                            <TextBlock Text="{Binding NameError}" 
+                                       Style="{StaticResource ErrorTextStyle}"
+                                       Visibility="{Binding NameError, Converter={StaticResource BoolToVis}}"/>
+                        </StackPanel>
+
+                        <!-- River -->
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="River*:" VerticalAlignment="Center"/>
+                        <StackPanel Grid.Row="1" Grid.Column="1">
+                            <TextBox Text="{Binding River, UpdateSourceTrigger=PropertyChanged}" 
+                                     Style="{StaticResource InputFieldStyle}"/>
+                            <TextBlock Text="{Binding RiverError}" 
+                                       Style="{StaticResource ErrorTextStyle}"
+                                       Visibility="{Binding RiverError, Converter={StaticResource BoolToVis}}"/>
+                        </StackPanel>
+
+                        <!-- Description -->
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Description:" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                        <StackPanel Grid.Row="2" Grid.Column="1">
+                            <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" 
+                                     Height="80" TextWrapping="Wrap" AcceptsReturn="True"
+                                     VerticalScrollBarVisibility="Auto"
+                                     Style="{StaticResource InputFieldStyle}"/>
+                            <TextBlock Text="{Binding DescriptionError}" 
+                                       Style="{StaticResource ErrorTextStyle}"
+                                       Visibility="{Binding DescriptionError, Converter={StaticResource BoolToVis}}"/>
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+
+                <!-- Coordinates -->
+                <GroupBox Header="Coordinates" Margin="0,0,0,15" Padding="15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Latitude -->
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Latitude*:" VerticalAlignment="Center"/>
+                        <StackPanel Grid.Row="0" Grid.Column="1">
+                            <TextBox Text="{Binding Latitude, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource DoubleToStringConverter}}" 
+                                       Style="{StaticResource InputFieldStyle}"/>
+                            <TextBlock Text="{Binding LatitudeError}" 
+                                       Style="{StaticResource ErrorTextStyle}"
+                                       Visibility="{Binding LatitudeError, Converter={StaticResource BoolToVis}}"/>
+                            <TextBlock Text="Range: -90.0 to 90.0" FontSize="10" Foreground="Gray"/>
+                        </StackPanel>
+
+                        <!-- Longitude -->
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Longitude*:" VerticalAlignment="Center"/>
+                        <StackPanel Grid.Row="1" Grid.Column="1">
+                            <TextBox Text="{Binding Longitude, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource DoubleToStringConverter}}" 
+                                       Style="{StaticResource InputFieldStyle}"/>
+                            <TextBlock Text="{Binding LongitudeError}" 
+                                       Style="{StaticResource ErrorTextStyle}"
+                                       Visibility="{Binding LongitudeError, Converter={StaticResource BoolToVis}}"/>
+                            <TextBlock Text="Range: -180.0 to 180.0" FontSize="10" Foreground="Gray"/>
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+
+                <!-- Facilities -->
+                <GroupBox Header="Facilities" Margin="0,0,0,15" Padding="15">
+                    <StackPanel>
+                        <CheckBox Content="Has Parking" IsChecked="{Binding HasParking}" 
+                                  Margin="0,0,0,10" FontWeight="Medium"/>
+                        <CheckBox Content="Has Facilities (Restrooms, Food, etc.)" IsChecked="{Binding HasFacilities}" 
+                                  FontWeight="Medium"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- Coordinate Helper -->
+                <GroupBox Header="Coordinate Helper" Margin="0,0,0,15" Padding="15">
+                    <StackPanel>
+                        <TextBlock Text="Common Serbian River Locations:" FontWeight="Bold" Margin="0,0,0,5"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Button Grid.Row="0" Grid.Column="0" Content="Tara River" 
+                                    Click="SetTaraCoordinates" Margin="2" Padding="5"/>
+                            <Button Grid.Row="0" Grid.Column="1" Content="Drina River" 
+                                    Click="SetDrinaCoordinates" Margin="2" Padding="5"/>
+                            <Button Grid.Row="1" Grid.Column="0" Content="Una River" 
+                                    Click="SetUnaCoordinates" Margin="2" Padding="5"/>
+                            <Button Grid.Row="1" Grid.Column="1" Content="Ibar River" 
+                                    Click="SetIbarCoordinates" Margin="2" Padding="5"/>
+                            <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Belgrade (Default)" 
+                                    Click="SetBelgradeCoordinates" Margin="2" Padding="5"/>
+                        </Grid>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Status Message -->
+        <TextBlock Grid.Row="2" Text="{Binding StatusMessage}" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,10" FontWeight="Bold"/>
+
+        <!-- Action Buttons -->
+        <Grid Grid.Row="3" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Loading Indicator -->
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                <ProgressBar Width="100" Height="15" IsIndeterminate="{Binding IsLoading}" 
+                            Visibility="{Binding IsLoading, Converter={StaticResource BoolToVis}}"
+                            Margin="0,0,10,0"/>
+                <TextBlock Text="Processing..." 
+                          Visibility="{Binding IsLoading, Converter={StaticResource BoolToVis}}"
+                          VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Reset Button -->
+            <Button Grid.Column="1" Content="Reset" Command="{Binding ResetCommand}" 
+                    Margin="0,0,10,0" Padding="20,8" MinWidth="80"/>
+
+            <!-- Cancel Button -->
+            <Button Grid.Column="2" Content="Cancel" Click="CancelButton_Click"
+                    Margin="0,0,10,0" Padding="20,8" MinWidth="80"/>
+
+            <!-- Save Button -->
+            <Button Grid.Column="3" Content="{Binding IsEditMode, Converter={StaticResource BoolToSaveTextConverter}}" 
+                    Command="{Binding SaveCommand}" 
+                    Background="#4CAF50" Foreground="White" 
+                    Padding="20,8" MinWidth="80" FontWeight="Bold"/>
+        </Grid>
+    </Grid>
+</Window>

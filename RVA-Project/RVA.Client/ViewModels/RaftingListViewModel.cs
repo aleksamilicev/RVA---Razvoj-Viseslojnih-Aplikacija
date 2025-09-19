@@ -184,20 +184,46 @@ namespace RVA.Client.ViewModels
 
         private void AddNewRafting()
         {
-            var window = new RaftingAddEditView();
-            window.DataContext = new RaftingAddEditViewModel(_serviceClient);
-            window.ShowDialog();
-            LoadRaftings();
+            OpenAddEditDialog();
+        }
+
+        private void OpenAddEditDialog(RaftingDto raftingToEdit = null)
+        {
+            try
+            {
+                var viewModel = new RaftingAddEditViewModel(_serviceClient, raftingToEdit);
+                var dialog = new RaftingAddEditView { DataContext = viewModel };
+
+                // Subscribe to save event
+                viewModel.RaftingSaved += (sender, savedRafting) =>
+                {
+                    if (raftingToEdit == null)
+                    {
+                        // Adding new
+                        Raftings.Add(savedRafting);
+                        StatusMessage = $"Rafting '{savedRafting.Name}' added successfully.";
+                    }
+                    else
+                    {
+                        // Editing existing - refresh the list
+                        LoadRaftings();
+                        StatusMessage = $"Rafting '{savedRafting.Name}' updated successfully.";
+                    }
+                    dialog.DialogResult = true;
+                };
+
+                dialog.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Error opening add/edit dialog: {ex.Message}";
+            }
         }
 
         private void EditRafting()
         {
             if (SelectedRafting == null) return;
-
-            var window = new RaftingAddEditView();
-            window.DataContext = new RaftingAddEditViewModel(_serviceClient, SelectedRafting);
-            window.ShowDialog();
-            LoadRaftings();
+            OpenAddEditDialog(SelectedRafting);
         }
 
         private async void DeleteRafting()
