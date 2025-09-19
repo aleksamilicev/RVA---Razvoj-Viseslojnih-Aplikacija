@@ -11,6 +11,7 @@
 
     <UserControl.Resources>
         <conv:BooleanToVisibilityConverter x:Key="BoolToVis" />
+
         <!-- Style for availability indicators -->
         <Style x:Key="AvailabilityIndicatorStyle" TargetType="Ellipse">
             <Setter Property="Width" Value="10"/>
@@ -75,10 +76,10 @@
                              VerticalAlignment="Center" Margin="0,0,10,0"/>
 
                     <TextBlock Text="Type:" VerticalAlignment="Center" Margin="0,0,5,0"/>
-                    <ComboBox Width="100" SelectedItem="{Binding FilterType}" 
+                    <ComboBox Width="120" SelectedItem="{Binding FilterType}" 
                               VerticalAlignment="Center" Margin="0,0,10,0">
                         <ComboBox.Items>
-                            <ComboBoxItem Content="All" Tag="{x:Null}"/>
+                            <ComboBoxItem Content="All Types" Tag="{x:Null}"/>
                             <ComboBoxItem Content="Wetsuit" Tag="{x:Static enums:ClothingType.Wetsuit}"/>
                             <ComboBoxItem Content="Life Jacket" Tag="{x:Static enums:ClothingType.LifeJacket}"/>
                             <ComboBoxItem Content="Helmet" Tag="{x:Static enums:ClothingType.Helmet}"/>
@@ -89,7 +90,7 @@
                     </ComboBox>
 
                     <TextBlock Text="Available:" VerticalAlignment="Center" Margin="0,0,5,0"/>
-                    <ComboBox Width="80" SelectedItem="{Binding FilterIsAvailable}" 
+                    <ComboBox Width="80" SelectedValue="{Binding FilterIsAvailable}" 
                               VerticalAlignment="Center" Margin="0,0,10,0">
                         <ComboBox.Items>
                             <ComboBoxItem Content="All" Tag="{x:Null}"/>
@@ -99,7 +100,7 @@
                     </ComboBox>
 
                     <TextBlock Text="Waterproof:" VerticalAlignment="Center" Margin="0,0,5,0"/>
-                    <ComboBox Width="80" SelectedItem="{Binding FilterIsWaterproof}" 
+                    <ComboBox Width="90" SelectedValue="{Binding FilterIsWaterproof}" 
                               VerticalAlignment="Center" Margin="0,0,10,0">
                         <ComboBox.Items>
                             <ComboBoxItem Content="All" Tag="{x:Null}"/>
@@ -172,11 +173,17 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
+                <!-- ID -->
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40" CanUserSort="True"/>
+
                 <!-- Name -->
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="120" CanUserSort="True"/>
 
                 <!-- Type -->
                 <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="80" CanUserSort="True"/>
+
+                <!-- Material -->
+                <DataGridTextColumn Header="Material" Binding="{Binding Material}" Width="80" CanUserSort="True"/>
 
                 <!-- Size -->
                 <DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="50" CanUserSort="True"/>
@@ -186,9 +193,6 @@
 
                 <!-- Color -->
                 <DataGridTextColumn Header="Color" Binding="{Binding Color}" Width="80" CanUserSort="True"/>
-
-                <!-- Material -->
-                <DataGridTextColumn Header="Material" Binding="{Binding Material}" Width="90" CanUserSort="True"/>
 
                 <!-- Waterproof -->
                 <DataGridTemplateColumn Header="💧" Width="35" CanUserSort="True" SortMemberPath="IsWaterproof">

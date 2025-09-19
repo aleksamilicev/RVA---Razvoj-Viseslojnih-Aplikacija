@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Input;
 using System.ComponentModel;
 using System.Windows.Data;
+using System.Windows.Threading;
 
 namespace RVA.Client.ViewModels
 {
@@ -22,6 +23,7 @@ namespace RVA.Client.ViewModels
         private bool _isLoading;
         private string _statusMessage;
         private ICollectionView _raftingsView;
+        private DispatcherTimer _searchTimer; // Za debounce funkcionalnost
         #endregion
 
         #region Properties
@@ -56,7 +58,9 @@ namespace RVA.Client.ViewModels
             set
             {
                 SetProperty(ref _searchText, value);
-                ApplyFilters();
+                // Koristi debounce za bolje performanse
+                _searchTimer?.Stop();
+                _searchTimer?.Start();
             }
         }
 
@@ -82,8 +86,15 @@ namespace RVA.Client.ViewModels
             set => SetProperty(ref _statusMessage, value);
         }
 
-        // Enum values for ComboBox binding
-        public Array RaftingStates => Enum.GetValues(typeof(RaftingState));
+        // Enum values for ComboBox binding - dodaj null opciju za "All States"
+        public object[] RaftingStates
+        {
+            get
+            {
+                var states = new object[] { null }.Concat(Enum.GetValues(typeof(RaftingState)).Cast<object>()).ToArray();
+                return states;
+            }
+        }
         #endregion
 
         #region Commands
@@ -108,6 +119,17 @@ namespace RVA.Client.ViewModels
         {
             _serviceClient = serviceClient ?? new WcfServiceClient();
             Raftings = new ObservableCollection<RaftingDto>();
+
+            // Initialize search timer for debounce
+            _searchTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(300) // 300ms delay
+            };
+            _searchTimer.Tick += (s, e) =>
+            {
+                _searchTimer.Stop();
+                ApplyFilters();
+            };
 
             // Initialize commands
             LoadRaftingsCommand = new RelayCommand(_ => LoadRaftings());
@@ -272,16 +294,86 @@ namespace RVA.Client.ViewModels
                 var rafting = item as RaftingDto;
                 if (rafting == null) return false;
 
-                // Text filter
+                // Text filter - proverava sva relevantna polja
                 if (!string.IsNullOrWhiteSpace(SearchText))
                 {
                     var searchLower = SearchText.ToLower();
-                    if (!rafting.Name.ToLower().Contains(searchLower) &&
-                        !rafting.Description.ToLower().Contains(searchLower) &&
-                        !rafting.WeatherConditions.ToLower().Contains(searchLower))
-                    {
+
+                    // Proveri glavna tekstualna polja
+                    bool matchFound = false;
+
+                    // Name
+                    if (!string.IsNullOrEmpty(rafting.Name) &&
+                        rafting.Name.ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Description
+                    if (!matchFound && !string.IsNullOrEmpty(rafting.Description) &&
+                        rafting.Description.ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Weather Conditions
+                    if (!matchFound && !string.IsNullOrEmpty(rafting.WeatherConditions) &&
+                        rafting.WeatherConditions.ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Current State
+                    if (!matchFound && rafting.CurrentState.ToString().ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Distance (konvertuj u string za pretragu)
+                    if (!matchFound && rafting.Distance.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Duration
+                    if (!matchFound && rafting.Duration.ToString(@"hh\:mm").ToLower().Contains(searchLower))
+                        matchFound = true;
+
+
+                    // Current Intensity
+                    if (!matchFound && rafting.CurrentIntensity.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Current Speed
+                    if (!matchFound && rafting.CurrentSpeedKmh.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Price Per Person
+                    if (!matchFound && rafting.PricePerPerson.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Participant Count
+                    if (!matchFound && rafting.ParticipantCount.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Max Participants
+                    if (!matchFound && rafting.MaxParticipants.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Capacity
+                    if (!matchFound && rafting.Capacity.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Guide ID
+                    if (!matchFound && rafting.GuideId.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Start and End Location IDs
+                    if (!matchFound && rafting.StartLocationId.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    if (!matchFound && rafting.EndLocationId.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // Start Time i End Time (formatirao kao string)
+                    if (!matchFound && rafting.StartTime.ToString().ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    if (!matchFound && rafting.EndTime.ToString().ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    if (!matchFound)
                         return false;
-                    }
                 }
 
                 // State filter
@@ -307,6 +399,7 @@ namespace RVA.Client.ViewModels
         #region Cleanup
         public void Cleanup()
         {
+            _searchTimer?.Stop();
             _serviceClient?.Dispose();
         }
         #endregion

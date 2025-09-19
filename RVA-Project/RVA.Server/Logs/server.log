@@ -704,3 +704,213 @@ System.Exception: Failed to load data from XML file: C:\Users\KORISNIK\Desktop\R
 2025-09-18 20:48:42,597 [124] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
 2025-09-18 20:48:42,603 [124] INFO  ServerLogger - Getting all clothing items
 2025-09-18 20:48:42,603 [124] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 12:47:34,635 [8] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-19 12:47:34,690 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 12:47:34,690 [8] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-19 12:47:34,705 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:47:34,705 [8] INFO  ServerLogger - Loaded 10 LocationDto entities from storage
+2025-09-19 12:47:46,092 [8] INFO  ServerLogger - Getting all raftings
+2025-09-19 12:47:46,092 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 12:47:46,214 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:47:46,214 [8] INFO  ServerLogger - Loaded 10 LocationDto entities from storage
+2025-09-19 12:47:46,214 [8] INFO  ServerLogger - Getting all locations
+2025-09-19 12:47:46,214 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:47:46,278 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 12:47:46,278 [8] INFO  ServerLogger - Loaded 10 ClothingDto entities from storage
+2025-09-19 12:47:46,278 [8] INFO  ServerLogger - Getting all clothing items
+2025-09-19 12:47:46,278 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 12:47:46,611 [8] INFO  ServerLogger - Getting all raftings
+2025-09-19 12:47:46,611 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 12:47:46,611 [8] INFO  ServerLogger - Getting all locations
+2025-09-19 12:47:46,611 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:47:46,630 [8] INFO  ServerLogger - Getting all clothing items
+2025-09-19 12:47:46,630 [8] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 12:56:57,286 [62] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-19 12:56:57,313 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 12:56:57,313 [62] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-19 12:56:57,323 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:56:57,323 [62] INFO  ServerLogger - Loaded 10 LocationDto entities from storage
+2025-09-19 12:56:57,345 [62] INFO  ServerLogger - Getting all raftings
+2025-09-19 12:56:57,345 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 12:56:57,433 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:56:57,435 [62] INFO  ServerLogger - Loaded 10 LocationDto entities from storage
+2025-09-19 12:56:57,438 [62] INFO  ServerLogger - Getting all locations
+2025-09-19 12:56:57,438 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:56:57,456 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 12:56:57,456 [62] INFO  ServerLogger - Loaded 10 ClothingDto entities from storage
+2025-09-19 12:56:57,456 [62] INFO  ServerLogger - Getting all clothing items
+2025-09-19 12:56:57,456 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 12:56:57,694 [62] INFO  ServerLogger - Getting all raftings
+2025-09-19 12:56:57,694 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 12:56:57,706 [62] INFO  ServerLogger - Getting all locations
+2025-09-19 12:56:57,708 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:56:57,715 [62] INFO  ServerLogger - Getting all clothing items
+2025-09-19 12:56:57,717 [62] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 12:58:34,200 [58] INFO  ServerLogger - Getting all raftings
+2025-09-19 12:58:34,200 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 12:58:34,298 [58] INFO  ServerLogger - Getting all locations
+2025-09-19 12:58:34,298 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:58:34,314 [58] INFO  ServerLogger - Getting all clothing items
+2025-09-19 12:58:34,314 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 12:58:34,540 [58] INFO  ServerLogger - Getting all raftings
+2025-09-19 12:58:34,540 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 12:58:34,551 [58] INFO  ServerLogger - Getting all locations
+2025-09-19 12:58:34,551 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 12:58:34,551 [58] INFO  ServerLogger - Getting all clothing items
+2025-09-19 12:58:34,566 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:12:59,262 [46] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:12:59,278 [46] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:12:59,342 [46] INFO  ServerLogger - Getting all locations
+2025-09-19 13:12:59,342 [46] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:12:59,373 [46] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:12:59,392 [46] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:12:59,630 [46] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:12:59,630 [46] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:12:59,642 [46] INFO  ServerLogger - Getting all locations
+2025-09-19 13:12:59,642 [46] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:12:59,642 [46] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:12:59,642 [46] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:14:22,650 [58] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:14:22,650 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:14:22,741 [58] INFO  ServerLogger - Getting all locations
+2025-09-19 13:14:22,741 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:14:22,773 [58] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:14:22,773 [58] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:14:23,010 [58] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:14:23,010 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:14:23,010 [58] INFO  ServerLogger - Getting all locations
+2025-09-19 13:14:23,010 [58] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:14:23,026 [58] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:14:23,026 [58] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:14:39,099 [16] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-19 13:14:39,131 [16] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:14:39,131 [16] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-19 13:14:39,131 [16] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:14:39,131 [16] INFO  ServerLogger - Loaded 10 LocationDto entities from storage
+2025-09-19 13:14:39,163 [16] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:14:39,163 [16] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:14:39,273 [16] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:14:39,273 [16] INFO  ServerLogger - Loaded 10 LocationDto entities from storage
+2025-09-19 13:14:39,279 [16] INFO  ServerLogger - Getting all locations
+2025-09-19 13:14:39,279 [16] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:14:39,305 [16] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:14:39,305 [16] INFO  ServerLogger - Loaded 5 ClothingDto entities from storage
+2025-09-19 13:14:39,321 [16] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:14:39,321 [16] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:14:39,542 [16] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:14:39,542 [16] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:14:39,542 [16] INFO  ServerLogger - Getting all locations
+2025-09-19 13:14:39,558 [16] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:14:39,558 [16] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:14:39,558 [16] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:15:40,351 [16] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:15:40,364 [16] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:15:58,523 [16] INFO  ServerLogger - Marking clothing 2 as used
+2025-09-19 13:15:58,523 [16] INFO  ServerLogger - Updated ClothingDto entity with id 2
+2025-09-19 13:15:58,539 [16] INFO  ServerLogger - Successfully saved 5 items to C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:15:58,539 [16] INFO  ServerLogger - Saved 5 ClothingDto entities
+2025-09-19 13:15:58,539 [16] INFO  ServerLogger - Clothing 2 marked as used
+2025-09-19 13:16:07,567 [22] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:16:07,567 [22] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:16:07,657 [22] INFO  ServerLogger - Getting all locations
+2025-09-19 13:16:07,657 [22] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:16:07,683 [22] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:16:07,683 [22] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:16:07,938 [22] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:16:07,938 [22] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:16:07,938 [22] INFO  ServerLogger - Getting all locations
+2025-09-19 13:16:07,952 [22] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:16:07,958 [22] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:16:07,958 [22] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:16:12,483 [22] INFO  ServerLogger - Marking clothing 2 as available
+2025-09-19 13:16:12,483 [22] INFO  ServerLogger - Updated ClothingDto entity with id 2
+2025-09-19 13:16:12,483 [22] INFO  ServerLogger - Successfully saved 5 items to C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:16:12,483 [22] INFO  ServerLogger - Saved 5 ClothingDto entities
+2025-09-19 13:16:12,483 [22] INFO  ServerLogger - Clothing 2 marked as available
+2025-09-19 13:31:19,863 [22] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:31:19,868 [22] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:31:19,958 [22] INFO  ServerLogger - Getting all locations
+2025-09-19 13:31:19,962 [22] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:31:19,991 [22] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:31:20,007 [22] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:31:20,297 [22] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:31:20,297 [22] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:31:20,306 [22] INFO  ServerLogger - Getting all locations
+2025-09-19 13:31:20,306 [22] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:31:20,318 [22] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:31:20,318 [22] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:33:21,896 [40] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:33:21,896 [40] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:33:22,602 [40] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:33:22,602 [40] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:33:22,764 [40] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:33:22,764 [40] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:38:56,477 [48] INFO  ServerLogger - ServerLogger successfully configured
+2025-09-19 13:38:56,499 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:38:56,499 [48] INFO  ServerLogger - Loaded 10 RaftingDto entities from storage
+2025-09-19 13:38:56,499 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:38:56,499 [48] INFO  ServerLogger - Loaded 10 LocationDto entities from storage
+2025-09-19 13:38:56,531 [48] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:38:56,531 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:38:56,626 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:38:56,626 [48] INFO  ServerLogger - Loaded 10 LocationDto entities from storage
+2025-09-19 13:38:56,626 [48] INFO  ServerLogger - Getting all locations
+2025-09-19 13:38:56,626 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:38:56,657 [48] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:38:56,657 [48] INFO  ServerLogger - Loaded 5 ClothingDto entities from storage
+2025-09-19 13:38:56,673 [48] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:38:56,673 [48] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:38:56,909 [48] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:38:56,909 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:38:56,925 [48] INFO  ServerLogger - Getting all locations
+2025-09-19 13:38:56,925 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:38:56,925 [48] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:38:56,925 [48] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:41:59,096 [48] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:41:59,098 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:41:59,195 [48] INFO  ServerLogger - Getting all locations
+2025-09-19 13:41:59,197 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:41:59,230 [48] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:41:59,230 [48] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:41:59,455 [48] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:41:59,455 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:41:59,455 [48] INFO  ServerLogger - Getting all locations
+2025-09-19 13:41:59,455 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:41:59,471 [48] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:41:59,471 [48] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:43:32,412 [48] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:43:32,412 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:43:32,504 [48] INFO  ServerLogger - Getting all locations
+2025-09-19 13:43:32,507 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:43:32,533 [48] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:43:32,533 [48] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:43:32,743 [48] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:43:32,743 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:43:32,759 [48] INFO  ServerLogger - Getting all locations
+2025-09-19 13:43:32,759 [48] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:43:32,770 [48] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:43:32,770 [48] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:46:26,576 [45] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:46:26,576 [45] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:46:26,676 [45] INFO  ServerLogger - Getting all locations
+2025-09-19 13:46:26,676 [45] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:46:26,707 [45] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:46:26,707 [45] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:46:26,935 [45] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:46:26,935 [45] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:46:26,951 [45] INFO  ServerLogger - Getting all locations
+2025-09-19 13:46:26,951 [45] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:46:26,951 [45] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:46:26,951 [45] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:47:47,283 [45] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:47:47,289 [45] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:47:47,369 [45] INFO  ServerLogger - Getting all locations
+2025-09-19 13:47:47,369 [45] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:47:47,400 [45] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:47:47,400 [45] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv
+2025-09-19 13:47:47,624 [45] INFO  ServerLogger - Getting all raftings
+2025-09-19 13:47:47,626 [45] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\rafting_data.csv
+2025-09-19 13:47:47,626 [45] INFO  ServerLogger - Getting all locations
+2025-09-19 13:47:47,626 [45] INFO  ServerLogger - Successfully loaded 10 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\location_data.csv
+2025-09-19 13:47:47,638 [45] INFO  ServerLogger - Getting all clothing items
+2025-09-19 13:47:47,638 [45] INFO  ServerLogger - Successfully loaded 5 items from C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Server\DataFiles\clothing_data.csv

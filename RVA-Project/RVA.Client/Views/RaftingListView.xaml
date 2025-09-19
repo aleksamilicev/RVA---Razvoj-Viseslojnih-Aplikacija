@@ -68,19 +68,6 @@
                     <TextBox Width="200" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
                              VerticalAlignment="Center" Margin="0,0,15,0"/>
 
-                    <TextBlock Text="Filter by State:" VerticalAlignment="Center" Margin="0,0,5,0"/>
-                    <ComboBox Width="120" SelectedItem="{Binding FilterState}" 
-                              VerticalAlignment="Center" Margin="0,0,15,0">
-                        <ComboBox.Items>
-                            <ComboBoxItem Content="All States" Tag="{x:Null}"/>
-                            <ComboBoxItem Content="Planned" Tag="{x:Static enums:RaftingState.Planned}"/>
-                            <ComboBoxItem Content="Boarding" Tag="{x:Static enums:RaftingState.Boarding}"/>
-                            <ComboBoxItem Content="Paddling" Tag="{x:Static enums:RaftingState.Paddling}"/>
-                            <ComboBoxItem Content="Resting" Tag="{x:Static enums:RaftingState.Resting}"/>
-                            <ComboBoxItem Content="Finished" Tag="{x:Static enums:RaftingState.Finished}"/>
-                        </ComboBox.Items>
-                    </ComboBox>
-
                     <Button Content="Clear Filters" Command="{Binding ClearFiltersCommand}" 
                             Margin="5,0" Padding="10,5"/>
                 </StackPanel>

@@ -1,6 +1,6 @@
 Id,Name,Type,Material,IsWaterproof,Size,Brand,Color,IsAvailable,LastCleaned,Condition
 1,Neoprene Wetsuit Full,Wetsuit,Neoprene,True,42,O'Neill,Black,True,2024-01-15T00:00:00.0000000,Good
-2,Life Jacket Adult L,LifeJacket,Neoprene,True,44,Salus,Orange,True,2025-09-19T13:16:12.4839982,Excellent
+2,Life Jacket Adult L,LifeJacket,Neoprene,True,44,Salus,Orange,False,2025-09-18T13:15:58.5236900,Excellent
 3,Whitewater Helmet,Helmet,Neoprene,False,58,Sweet,Blue,False,2023-12-20T00:00:00.0000000,Fair
 4,Neoprene Boots 5mm,Boots,Neoprene,True,41,Cressi,Black,True,2024-01-12T00:00:00.0000000,Good
 5,Carbon Paddle,Paddle,Neoprene,False,0,Werner,Yellow,True,2024-01-08T00:00:00.0000000,Excellent

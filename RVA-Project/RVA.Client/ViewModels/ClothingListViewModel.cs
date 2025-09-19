@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Input;
 using System.ComponentModel;
 using System.Windows.Data;
+using System.Windows.Threading;
 
 namespace RVA.Client.ViewModels
 {
@@ -24,6 +25,7 @@ namespace RVA.Client.ViewModels
         private bool _isLoading;
         private string _statusMessage;
         private ICollectionView _clothingView;
+        private DispatcherTimer _searchTimer; // Za debounce funkcionalnost
         #endregion
 
         #region Properties
@@ -59,7 +61,9 @@ namespace RVA.Client.ViewModels
             set
             {
                 SetProperty(ref _searchText, value);
-                ApplyFilters();
+                // Koristi debounce za bolje performanse
+                _searchTimer?.Stop();
+                _searchTimer?.Start();
             }
         }
 
@@ -105,8 +109,18 @@ namespace RVA.Client.ViewModels
             set => SetProperty(ref _statusMessage, value);
         }
 
-        // Enum values for ComboBox binding
-        public Array ClothingTypes => Enum.GetValues(typeof(ClothingType));
+        // Enum values for ComboBox binding - dodaj null opciju za "All Types"
+        public object[] ClothingTypes
+        {
+            get
+            {
+                var types = new object[] { null }.Concat(Enum.GetValues(typeof(ClothingType)).Cast<object>()).ToArray();
+                return types;
+            }
+        }
+
+        // Boolean options for filters
+        public object[] BooleanOptions => new object[] { null, true, false };
         #endregion
 
         #region Commands
@@ -132,6 +146,17 @@ namespace RVA.Client.ViewModels
         {
             _serviceClient = serviceClient ?? new WcfServiceClient();
             Clothing = new ObservableCollection<ClothingDto>();
+
+            // Initialize search timer for debounce
+            _searchTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(300) // 300ms delay
+            };
+            _searchTimer.Tick += (s, e) =>
+            {
+                _searchTimer.Stop();
+                ApplyFilters();
+            };
 
             // Initialize commands
             LoadClothingCommand = new RelayCommand(_ => LoadClothing());
@@ -335,17 +360,89 @@ namespace RVA.Client.ViewModels
                 var clothing = item as ClothingDto;
                 if (clothing == null) return false;
 
-                // Text filter
+                // Text filter - proverava sva relevantna polja
                 if (!string.IsNullOrWhiteSpace(SearchText))
                 {
                     var searchLower = SearchText.ToLower();
-                    if (!clothing.Name.ToLower().Contains(searchLower) &&
-                        !clothing.Brand.ToLower().Contains(searchLower) &&
-                        !clothing.Color.ToLower().Contains(searchLower) &&
-                        !clothing.Condition.ToLower().Contains(searchLower))
+
+                    bool matchFound = false;
+
+                    // Name
+                    if (!string.IsNullOrEmpty(clothing.Name) &&
+                        clothing.Name.ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Type
+                    if (!matchFound && clothing.Type.ToString().ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Material
+                    if (!matchFound && clothing.Material.ToString().ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Brand
+                    if (!matchFound && !string.IsNullOrEmpty(clothing.Brand) &&
+                        clothing.Brand.ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Color
+                    if (!matchFound && !string.IsNullOrEmpty(clothing.Color) &&
+                        clothing.Color.ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Condition
+                    if (!matchFound && !string.IsNullOrEmpty(clothing.Condition) &&
+                        clothing.Condition.ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // Size (konvertuj u string za pretragu)
+                    if (!matchFound && clothing.Size.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    // IsWaterproof kao tekst
+                    if (!matchFound)
                     {
-                        return false;
+                        if (!clothing.IsWaterproof &&
+                            (searchLower.Contains("not waterproof") || searchLower.Contains("non-waterproof")))
+                        {
+                            matchFound = true;
+                        }
+                        else if (clothing.IsWaterproof &&
+                                 searchLower.Contains("waterproof") &&
+                                 !searchLower.Contains("not waterproof") &&
+                                 !searchLower.Contains("non-waterproof"))
+                        {
+                            matchFound = true;
+                        }
                     }
+
+                    // IsAvailable kao tekst
+                    if (!matchFound)
+                    {
+                        if (!clothing.IsAvailable &&
+                            (searchLower.Contains("not available") || searchLower.Contains("non-available")))
+                        {
+                            matchFound = true;
+                        }
+                        else if (clothing.IsAvailable &&
+                                 searchLower.Contains("available") &&
+                                 !searchLower.Contains("not available") &&
+                                 !searchLower.Contains("non-available"))
+                        {
+                            matchFound = true;
+                        }
+                    }
+
+                    // LastCleaned datum
+                    if (!matchFound && clothing.LastCleaned.ToString().ToLower().Contains(searchLower))
+                        matchFound = true;
+
+                    // ID
+                    if (!matchFound && clothing.Id.ToString().Contains(SearchText))
+                        matchFound = true;
+
+                    if (!matchFound)
+                        return false;
                 }
 
                 // Type filter
@@ -385,6 +482,7 @@ namespace RVA.Client.ViewModels
         #region Cleanup
         public void Cleanup()
         {
+            _searchTimer?.Stop();
             _serviceClient?.Dispose();
         }
         #endregion
