@@ -10,6 +10,7 @@ using System.Linq;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Threading;
+using CommandManager = RVA.Client.Commands.CommandManager;
 
 namespace RVA.Client.ViewModels
 {
@@ -25,9 +26,19 @@ namespace RVA.Client.ViewModels
         private string _statusMessage;
         private ICollectionView _raftingsView;
         private DispatcherTimer _searchTimer; // Za debounce funkcionalnost
+        private CommandManager _commandManager;
         #endregion
 
         #region Properties
+
+        public CommandManager CommandManager
+        {
+            get => _commandManager;
+            set => SetProperty(ref _commandManager, value);
+        }
+
+        
+
         public ObservableCollection<RaftingDto> Raftings
         {
             get => _raftings;
@@ -107,6 +118,10 @@ namespace RVA.Client.ViewModels
         public ICommand RefreshCommand { get; }
         public ICommand ClearFiltersCommand { get; }
         public ICommand ChangeStateCommand { get; }
+
+        public ICommand UndoCommand { get; }
+        public ICommand RedoCommand { get; }
+        public ICommand ClearHistoryCommand { get; }
         #endregion
 
         #region Constructor
@@ -120,6 +135,7 @@ namespace RVA.Client.ViewModels
         {
             _serviceClient = serviceClient ?? new WcfServiceClient();
             Raftings = new ObservableCollection<RaftingDto>();
+            _commandManager = new CommandManager(maxHistorySize: 100);
 
             // Initialize search timer for debounce
             _searchTimer = new DispatcherTimer
@@ -141,6 +157,17 @@ namespace RVA.Client.ViewModels
             RefreshCommand = new RelayCommand(_ => LoadRaftings());
             ClearFiltersCommand = new RelayCommand(_ => ClearFilters());
             ChangeStateCommand = new RelayCommand(param => ChangeRaftingState(param), _ => SelectedRafting != null);
+
+            UndoCommand = new RelayCommand(_ => UndoLastCommand(), _ => CommandManager.CanUndo);
+            RedoCommand = new RelayCommand(_ => RedoLastCommand(), _ => CommandManager.CanRedo);
+            ClearHistoryCommand = new RelayCommand(_ => ClearCommandHistory());
+
+            _commandManager.PropertyChanged += (s, e) =>
+            {
+                ((RelayCommand)UndoCommand).RaiseCanExecuteChanged();
+                ((RelayCommand)RedoCommand).RaiseCanExecuteChanged();
+            };
+
 
             // Setup collection view for filtering
             RaftingsView = CollectionViewSource.GetDefaultView(Raftings);
@@ -199,17 +226,32 @@ namespace RVA.Client.ViewModels
                 {
                     if (raftingToEdit == null)
                     {
-                        // Adding new
-                        Raftings.Add(savedRafting);
-                        StatusMessage = $"Rafting '{savedRafting.Name}' added successfully.";
+                        // Adding new - use undoable command
+                        var addCommand = new AddRaftingCommand(_serviceClient, Raftings, savedRafting);
+                        if (CommandManager.ExecuteCommand(addCommand))
+                        {
+                            StatusMessage = $"Rafting '{savedRafting.Name}' added successfully.";
+                            dialog.DialogResult = true;
+                        }
+                        else
+                        {
+                            StatusMessage = "Failed to add rafting.";
+                        }
                     }
                     else
                     {
-                        // Editing existing - refresh the list
-                        LoadRaftings();
-                        StatusMessage = $"Rafting '{savedRafting.Name}' updated successfully.";
+                        // Editing existing - use undoable command
+                        var updateCommand = new UpdateRaftingCommand(_serviceClient, Raftings, raftingToEdit, savedRafting);
+                        if (CommandManager.ExecuteCommand(updateCommand))
+                        {
+                            StatusMessage = $"Rafting '{savedRafting.Name}' updated successfully.";
+                            dialog.DialogResult = true;
+                        }
+                        else
+                        {
+                            StatusMessage = "Failed to update rafting.";
+                        }
                     }
-                    dialog.DialogResult = true;
                 };
 
                 dialog.ShowDialog();
@@ -226,7 +268,7 @@ namespace RVA.Client.ViewModels
             OpenAddEditDialog(SelectedRafting);
         }
 
-        private async void DeleteRafting()
+        private void DeleteRafting()
         {
             if (SelectedRafting == null) return;
 
@@ -235,24 +277,17 @@ namespace RVA.Client.ViewModels
                 IsLoading = true;
                 StatusMessage = $"Deleting rafting: {SelectedRafting.Name}...";
 
-                var success = _serviceClient.Execute(() =>
-                    _serviceClient.RaftingService.Delete(SelectedRafting.Id),
-                    "Delete rafting");
-
-                if (success)
+                var deleteCommand = new DeleteRaftingCommand(_serviceClient, Raftings, SelectedRafting);
+                if (CommandManager.ExecuteCommand(deleteCommand))
                 {
-                    Raftings.Remove(SelectedRafting);
+                    var deletedName = SelectedRafting.Name;
                     SelectedRafting = null;
-                    StatusMessage = "Rafting deleted successfully.";
+                    StatusMessage = $"Rafting '{deletedName}' deleted successfully.";
                 }
                 else
                 {
                     StatusMessage = "Failed to delete rafting.";
                 }
-            }
-            catch (ServiceException ex)
-            {
-                StatusMessage = $"Error deleting rafting: {ex.Message}";
             }
             catch (Exception ex)
             {
@@ -272,7 +307,7 @@ namespace RVA.Client.ViewModels
             StatusMessage = $"View details for: {SelectedRafting.Name} - to be implemented";
         }
 
-        private async void ChangeRaftingState(object parameter)
+        private void ChangeRaftingState(object parameter)
         {
             if (SelectedRafting == null || parameter == null) return;
 
@@ -283,27 +318,16 @@ namespace RVA.Client.ViewModels
                     IsLoading = true;
                     StatusMessage = $"Changing state to {newState}...";
 
-                    var success = _serviceClient.Execute(() =>
-                        _serviceClient.RaftingService.ChangeState(SelectedRafting.Id, newState),
-                        "Change rafting state");
-
-                    if (success)
+                    var stateCommand = new ChangeRaftingStateCommand(_serviceClient, SelectedRafting, newState);
+                    if (CommandManager.ExecuteCommand(stateCommand))
                     {
-                        SelectedRafting.CurrentState = newState;
-                        SelectedRafting.ModifiedDate = DateTime.Now;
                         StatusMessage = $"State changed to {newState} successfully.";
-
-                        // Refresh the view to show updated data
                         RaftingsView.Refresh();
                     }
                     else
                     {
                         StatusMessage = "Failed to change state.";
                     }
-                }
-                catch (ServiceException ex)
-                {
-                    StatusMessage = $"Error changing state: {ex.Message}";
                 }
                 catch (Exception ex)
                 {
@@ -314,6 +338,38 @@ namespace RVA.Client.ViewModels
                     IsLoading = false;
                 }
             }
+        }
+
+        private void UndoLastCommand()
+        {
+            if (CommandManager.Undo())
+            {
+                StatusMessage = "Command undone successfully.";
+                RaftingsView.Refresh();
+            }
+            else
+            {
+                StatusMessage = "Failed to undo command.";
+            }
+        }
+
+        private void RedoLastCommand()
+        {
+            if (CommandManager.Redo())
+            {
+                StatusMessage = "Command redone successfully.";
+                RaftingsView.Refresh();
+            }
+            else
+            {
+                StatusMessage = "Failed to redo command.";
+            }
+        }
+
+        private void ClearCommandHistory()
+        {
+            CommandManager.ClearHistory();
+            StatusMessage = "Command history cleared.";
         }
 
         private void ApplyFilters()
@@ -432,6 +488,7 @@ namespace RVA.Client.ViewModels
         {
             _searchTimer?.Stop();
             _serviceClient?.Dispose();
+            _commandManager?.ClearHistory();
         }
         #endregion
     }

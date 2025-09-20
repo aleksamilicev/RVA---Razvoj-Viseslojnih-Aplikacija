@@ -120,11 +120,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\AddRaftingCommand.cs" />
+    <Compile Include="Commands\ChangeRaftingStateCommand.cs" />
+    <Compile Include="Commands\CommandManager.cs" />
+    <Compile Include="Commands\DeleteRaftingCommand.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\UpdateRaftingCommand.cs" />
     <Compile Include="Converters\BoolToSaveTextConverter.cs" />
     <Compile Include="Converters\DoubleToStringConverter.cs" />
     <Compile Include="Helpers\DataSeeder.cs" />
     <Compile Include="Interfaces\INavigationService.cs" />
+    <Compile Include="Interfaces\IUndoableCommand.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\WcfServiceClient.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />

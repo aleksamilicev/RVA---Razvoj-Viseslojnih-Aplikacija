@@ -328,6 +328,7 @@ namespace RVA.Client.ViewModels
             EndLocationId = _originalRafting.EndLocationId;
         }
 
+        // U RaftingAddEditViewModel, izmeni SaveRafting metodu:
         private async void SaveRafting()
         {
             try
@@ -342,45 +343,16 @@ namespace RVA.Client.ViewModels
                     rafting.Id = _originalRafting.Id;
                     rafting.CreatedDate = _originalRafting.CreatedDate;
                     rafting.ModifiedDate = DateTime.Now;
-
-                    var success = _serviceClient.Execute(() =>
-                        _serviceClient.RaftingService.Update(rafting),
-                        "Update rafting");
-
-                    if (success)
-                    {
-                        StatusMessage = "Rafting updated successfully!";
-                        RaftingSaved?.Invoke(this, rafting);
-                    }
-                    else
-                    {
-                        StatusMessage = "Failed to update rafting.";
-                    }
                 }
                 else
                 {
                     rafting.CreatedDate = DateTime.Now;
                     rafting.ModifiedDate = DateTime.Now;
-
-                    var newId = _serviceClient.Execute(() =>
-                        _serviceClient.RaftingService.Create(rafting),
-                        "Create rafting");
-
-                    if (newId > 0)
-                    {
-                        rafting.Id = newId;
-                        StatusMessage = "Rafting created successfully!";
-                        RaftingSaved?.Invoke(this, rafting);
-                    }
-                    else
-                    {
-                        StatusMessage = "Failed to create rafting.";
-                    }
                 }
-            }
-            catch (ServiceException ex)
-            {
-                StatusMessage = $"Error saving rafting: {ex.Message}";
+
+                // Samo pozovi event sa DTO - ne radi direktno sa servisom
+                StatusMessage = IsEditMode ? "Rafting updated successfully!" : "Rafting created successfully!";
+                RaftingSaved?.Invoke(this, rafting);
             }
             catch (Exception ex)
             {
