@@ -125,6 +125,7 @@
     <Compile Include="Commands\CommandManager.cs" />
     <Compile Include="Commands\DeleteRaftingCommand.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\SimulateRaftingCommand.cs" />
     <Compile Include="Commands\UpdateRaftingCommand.cs" />
     <Compile Include="Converters\BoolToSaveTextConverter.cs" />
     <Compile Include="Converters\DoubleToStringConverter.cs" />

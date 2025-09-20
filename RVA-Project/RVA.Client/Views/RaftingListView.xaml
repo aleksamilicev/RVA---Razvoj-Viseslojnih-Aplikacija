@@ -103,6 +103,21 @@
                             Background="#607D8B" Foreground="White" 
                             Margin="0,0,5,0" Padding="12,8"
                             ToolTip="{Binding CommandManager.NextRedoDescription}"/>
+
+                    <!-- Separator -->
+                    <Rectangle Width="1" Fill="Gray" Margin="10,0"/>
+
+                    <!-- Simulation Buttons -->
+                    <Button Content="▶ Simulate" Command="{Binding SimulateCommand}" 
+                            Background="#4CAF50" Foreground="White" 
+                            Margin="0,0,5,0" Padding="12,8"
+                            ToolTip="Start state simulation for selected rafting"/>
+
+                    <Button Content="⏹ Stop" Command="{Binding StopSimulationCommand}" 
+                            Background="#F44336" Foreground="White" 
+                            Margin="0,0,10,0" Padding="12,8"
+                            ToolTip="Stop running simulation"/>
+
                 </StackPanel>
                 
 

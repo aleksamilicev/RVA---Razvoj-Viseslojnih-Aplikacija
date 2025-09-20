@@ -71,10 +71,6 @@
                     <Button Content="Delete" Command="{Binding DeleteCommand}" 
                             Background="#F44336" Foreground="White" 
                             Margin="0,0,10,0" Padding="15,8"/>
-
-                    <Button Content="View Details" Command="{Binding ViewDetailsCommand}" 
-                            Background="#FF9800" Foreground="White" 
-                            Margin="0,0,10,0" Padding="15,8"/>
                 </StackPanel>
 
                 <!-- Refresh Button -->

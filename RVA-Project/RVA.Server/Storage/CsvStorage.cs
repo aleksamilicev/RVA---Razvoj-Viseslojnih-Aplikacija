@@ -265,15 +265,12 @@ namespace RVA.Server.Storage
             if (value is TimeSpan timeSpan)
                 return timeSpan.ToString(@"hh\:mm\:ss", CultureInfo.InvariantCulture);
 
-            // DODAJ OVO: Handle double values explicitly
             if (value is double doubleValue)
                 return doubleValue.ToString("F6", CultureInfo.InvariantCulture);
 
-            // DODAJ OVO: Handle decimal values explicitly
             if (value is decimal decimalValue)
                 return decimalValue.ToString("F6", CultureInfo.InvariantCulture);
 
-            // DODAJ OVO: Handle float values explicitly
             if (value is float floatValue)
                 return floatValue.ToString("F6", CultureInfo.InvariantCulture);
 

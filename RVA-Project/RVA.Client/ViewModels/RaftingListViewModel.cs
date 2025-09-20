@@ -4,6 +4,7 @@ using RVA.Client.Views;
 using RVA.Shared.DTOs;
 using RVA.Shared.Enums;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace RVA.Client.ViewModels
         private ICollectionView _raftingsView;
         private DispatcherTimer _searchTimer; // Za debounce funkcionalnost
         private CommandManager _commandManager;
+        private readonly Dictionary<int, SimulateRaftingCommand> _runningSimulations = new Dictionary<int, SimulateRaftingCommand>();
         #endregion
 
         #region Properties
@@ -61,6 +63,8 @@ namespace RVA.Client.ViewModels
                 ((RelayCommand)DeleteCommand).RaiseCanExecuteChanged();
                 ((RelayCommand)ViewDetailsCommand).RaiseCanExecuteChanged();
                 ((RelayCommand)ChangeStateCommand).RaiseCanExecuteChanged();
+                ((RelayCommand)SimulateCommand).RaiseCanExecuteChanged();
+                ((RelayCommand)StopSimulationCommand).RaiseCanExecuteChanged();
             }
         }
 
@@ -122,6 +126,9 @@ namespace RVA.Client.ViewModels
         public ICommand UndoCommand { get; }
         public ICommand RedoCommand { get; }
         public ICommand ClearHistoryCommand { get; }
+        public ICommand SimulateCommand { get; }
+        public ICommand StopSimulationCommand { get; }
+        public bool IsAnySimulationRunning => _runningSimulations.Any();
         #endregion
 
         #region Constructor
@@ -161,6 +168,8 @@ namespace RVA.Client.ViewModels
             UndoCommand = new RelayCommand(_ => UndoLastCommand(), _ => CommandManager.CanUndo);
             RedoCommand = new RelayCommand(_ => RedoLastCommand(), _ => CommandManager.CanRedo);
             ClearHistoryCommand = new RelayCommand(_ => ClearCommandHistory());
+            SimulateCommand = new RelayCommand(_ => StartSimulation(), _ => SelectedRafting != null && !IsSimulationRunning(SelectedRafting));
+            StopSimulationCommand = new RelayCommand(_ => StopSimulation(), _ => SelectedRafting != null && IsSimulationRunning(SelectedRafting));
 
             _commandManager.PropertyChanged += (s, e) =>
             {
@@ -212,6 +221,75 @@ namespace RVA.Client.ViewModels
         private void AddNewRafting()
         {
             OpenAddEditDialog();
+        }
+
+        private void StartSimulation()
+        {
+            if (SelectedRafting == null || IsSimulationRunning(SelectedRafting)) return;
+
+            try
+            {
+                var simulateCommand = new SimulateRaftingCommand(_serviceClient, SelectedRafting, UpdateSimulationStatus);
+
+                if (CommandManager.ExecuteCommand(simulateCommand))
+                {
+                    _runningSimulations[SelectedRafting.Id] = simulateCommand;
+                    StatusMessage = $"Starting simulation for '{SelectedRafting.Name}'";
+
+                    // Update command states
+                    ((RelayCommand)SimulateCommand).RaiseCanExecuteChanged();
+                    ((RelayCommand)StopSimulationCommand).RaiseCanExecuteChanged();
+                }
+                else
+                {
+                    StatusMessage = "Failed to start simulation.";
+                }
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Error starting simulation: {ex.Message}";
+            }
+        }
+
+        private void StopSimulation()
+        {
+            if (SelectedRafting == null || !IsSimulationRunning(SelectedRafting)) return;
+
+            try
+            {
+                if (_runningSimulations.TryGetValue(SelectedRafting.Id, out var simulateCommand))
+                {
+                    simulateCommand.Dispose();
+                    _runningSimulations.Remove(SelectedRafting.Id);
+                    StatusMessage = $"Simulation stopped for '{SelectedRafting.Name}'";
+
+                    // Update command states
+                    ((RelayCommand)SimulateCommand).RaiseCanExecuteChanged();
+                    ((RelayCommand)StopSimulationCommand).RaiseCanExecuteChanged();
+                    RaftingsView.Refresh();
+                }
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Error stopping simulation: {ex.Message}";
+            }
+        }
+
+        private bool IsSimulationRunning(RaftingDto rafting)
+        {
+            return rafting != null && _runningSimulations.ContainsKey(rafting.Id);
+        }
+
+        private void UpdateSimulationStatus(string message)
+        {
+            StatusMessage = message;
+
+            // Refresh view to show state changes
+            RaftingsView?.Refresh();
+
+            // Update command states
+            ((RelayCommand)SimulateCommand).RaiseCanExecuteChanged();
+            ((RelayCommand)StopSimulationCommand).RaiseCanExecuteChanged();
         }
 
         private void OpenAddEditDialog(RaftingDto raftingToEdit = null)
@@ -486,9 +564,16 @@ namespace RVA.Client.ViewModels
         #region Cleanup
         public void Cleanup()
         {
+            // Stop all running simulations
+            foreach (var simulation in _runningSimulations.Values)
+            {
+                simulation.Dispose();
+            }
+            _runningSimulations.Clear();
+
             _searchTimer?.Stop();
-            _serviceClient?.Dispose();
             _commandManager?.ClearHistory();
+            _serviceClient?.Dispose();
         }
         #endregion
     }
