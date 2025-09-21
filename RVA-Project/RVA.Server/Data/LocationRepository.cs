@@ -53,6 +53,18 @@ namespace RVA.Server.Data
             return Find(l => l.HasFacilities);
         }
 
+        public IEnumerable<LocationDto> GetWithStarted()
+        {
+            return Find(l => l.HasStarted);
+        }
+
+
+        /// Pronalazi lokacije koje imaju objekte/sadržaje
+        public IEnumerable<LocationDto> GetWithEnded()
+        {
+            return Find(l => l.HasEnded);
+        }
+
 
         /// Pronalazi lokacije u određenom radiusu od zadatih koordinata
         public IEnumerable<LocationDto> GetWithinRadius(double latitude, double longitude, double radiusKm)

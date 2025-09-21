@@ -149,6 +149,26 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
+                <!-- Has Started -->
+                <DataGridTemplateColumn Header="Started" Width="80" CanUserSort="True" SortMemberPath="HasStarted">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding HasStarted, Mode=OneWay}" IsEnabled="False" 
+                      HorizontalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Has Ended -->
+                <DataGridTemplateColumn Header="Ended" Width="80" CanUserSort="True" SortMemberPath="HasEnded">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding HasEnded, Mode=OneWay}" IsEnabled="False" 
+                      HorizontalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
                 <!-- Created Date -->
                 <DataGridTextColumn Header="Created" Binding="{Binding CreatedDate, StringFormat='dd/MM/yyyy'}" 
                                     Width="90" CanUserSort="True"/>

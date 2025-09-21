@@ -1,11 +1,11 @@
-Id,River,Latitude,Longitude,Name,Description,HasParking,HasFacilities,CreatedDate
-1,Drina,44.365200,19.119500,Bajina Basta,Popularno mesto za rafting na Drini.,True,True,2023-05-14T00:00:00.0000000
-2,Lim,43.385000,19.653200,Prijepolje,Polazna tacka za rafting Limom.,True,False,2023-06-20T00:00:00.0000000
-3,Ibar,43.730600,20.689700,Kraljevo,Mesto okupljanja za sportske aktivnosti na Ibru.,False,True,2023-07-05T00:00:00.0000000
-4,Djetinja,43.847200,19.842900,Uzice,Reka pogodna za krace rafting ture.,True,False,2023-08-12T00:00:00.0000000
-5,Kolubara,44.275600,20.008900,Valjevo,"Lokacija uz reku Kolubaru, pogodna za odmor i rekreaciju.",False,False,2023-09-01T00:00:00.0000000
-6,Morava,43.741200,21.433700,Cuprija,Popularno mesto za rekreativne sportove na Moravi.,True,True,2023-09-15T00:00:00.0000000
-7,Tara,43.949300,19.333700,Nacionalni Park Tara,Jedna od najlepsih destinacija u Srbiji za rafting i planinarenje.,True,True,2023-10-10T00:00:00.0000000
-8,Drina,43.864200,19.291200,Perucac,"Lokacija uz hidroelektranu, polazna tacka za splavarenje.",True,False,2023-10-25T00:00:00.0000000
-9,Gradac,44.283500,19.932100,Klisura reke Gradac,"Zasticeni prirodni rezervat, popularan za izlete.",False,False,2023-11-05T00:00:00.0000000
-10,Tisa,45.388600,20.429500,Becej,Polazna tacka za rafting i voznju camcima na Tisi.,True,True,2023-12-01T00:00:00.0000000
+Id,River,Latitude,Longitude,Name,Description,HasParking,HasFacilities,HasStarted,HasEnded,CreatedDate
+1,Drina,44.365200,19.119500,Bajina Basta,Popularno mesto za rafting na Drini.,True,True,False,False,2023-05-14T00:00:00.0000000
+2,Lim,43.385000,19.653200,Prijepolje,Polazna tacka za rafting Limom.,True,False,False,False,2023-06-20T00:00:00.0000000
+3,Ibar,43.730600,20.689700,Kraljevo,Mesto okupljanja za sportske aktivnosti na Ibru.,False,True,False,False,2023-07-05T00:00:00.0000000
+4,Djetinja,43.847200,19.842900,Uzice,Reka pogodna za krace rafting ture.,True,False,False,False,2023-08-12T00:00:00.0000000
+5,Kolubara,44.275600,20.008900,Valjevo,"Lokacija uz reku Kolubaru, pogodna za odmor i rekreaciju.",False,False,False,False,2023-09-01T00:00:00.0000000
+6,Morava,43.741200,21.433700,Cuprija,Popularno mesto za rekreativne sportove na Moravi.,True,True,False,False,2023-09-15T00:00:00.0000000
+7,Tara,43.949300,19.333700,Nacionalni Park Tara,Jedna od najlepsih destinacija u Srbiji za rafting i planinarenje.,True,True,False,False,2023-10-10T00:00:00.0000000
+8,Drina,43.864200,19.291200,Perucac,"Lokacija uz hidroelektranu, polazna tacka za splavarenje.",True,False,False,False,2023-10-25T00:00:00.0000000
+9,Gradac,44.283500,19.932100,Klisura reke Gradac,"Zasticeni prirodni rezervat, popularan za izlete.",False,False,False,False,2023-11-05T00:00:00.0000000
+10,Tisa,45.388600,20.429500,Becej,Polazna tacka za rafting i voznju camcima na Tisi.,True,True,False,False,2023-12-01T00:00:00.0000000

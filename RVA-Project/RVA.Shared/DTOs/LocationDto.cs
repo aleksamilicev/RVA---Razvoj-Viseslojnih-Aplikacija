@@ -35,6 +35,12 @@ namespace RVA.Shared.DTOs
         public bool HasFacilities { get; set; }
 
         [DataMember]
+        public bool HasStarted { get; set; }
+
+        [DataMember]
+        public bool HasEnded { get; set; }
+
+        [DataMember]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
     }
 }

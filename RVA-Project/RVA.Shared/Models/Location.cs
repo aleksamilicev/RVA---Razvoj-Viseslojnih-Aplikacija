@@ -18,6 +18,10 @@ namespace RVA.Shared.Models
         public string Description { get; set; } = string.Empty;
         public bool HasParking { get; set; }
         public bool HasFacilities { get; set; }
+
+        public bool HasStarted { get; set; }
+        public bool HasEnded { get; set; }
+
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         // Navigation properties

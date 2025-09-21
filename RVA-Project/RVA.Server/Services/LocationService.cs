@@ -210,6 +210,34 @@ namespace RVA.Server.Services
             }
         }
 
+        public IEnumerable<LocationDto> GetWithStarted()
+        {
+            try
+            {
+                _logger.Info("Getting locations with parking");
+                return _repository.GetWithStarted();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Error getting locations with started", ex);
+                throw new FaultException("Failed to retrieve locations with started");
+            }
+        }
+
+        public IEnumerable<LocationDto> GetWithEnded()
+        {
+            try
+            {
+                _logger.Info("Getting locations with ended");
+                return _repository.GetWithEnded();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Error getting locations with ended", ex);
+                throw new FaultException("Failed to retrieve locations with ended");
+            }
+        }
+
         public IEnumerable<LocationDto> GetWithinRadius(double latitude, double longitude, double radiusKm)
         {
             try
