@@ -84,6 +84,16 @@
                     </views:ClothingListView.DataContext>
                 </views:ClothingListView>
             </TabItem>
+
+            <!-- Graph View Tab -->
+            <TabItem Header="Rafting State Graph">
+                <views:RaftingStatsView>
+                    <views:RaftingStatsView.DataContext>
+                        <local:RaftingStatsViewModel/>
+                    </views:RaftingStatsView.DataContext>
+                </views:RaftingStatsView>
+            </TabItem>
+
         </TabControl>
     </Grid>
 </Window>

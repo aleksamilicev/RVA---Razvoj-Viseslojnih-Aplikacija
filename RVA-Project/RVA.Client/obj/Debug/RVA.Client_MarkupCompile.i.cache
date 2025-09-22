@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\KORISNIK\Desktop\RVA---Razvoj-Viseslojnih-Aplikacija\RVA-Project\RVA.Client\App.xaml
-7-1529799526
+81907961527
 
-34-679057871
-141-834723378
-MainWindow.xaml;Views\ClothingAddEditView.xaml;Views\ClothingListView.xaml;Views\LocationAddEditView.xaml;Views\LocationListView.xaml;Views\RaftingAddEditView.xaml;Views\RaftingListView.xaml;
+36-146379727
+151-1993156009
+MainWindow.xaml;Views\ClothingAddEditView.xaml;Views\ClothingListView.xaml;Views\LocationAddEditView.xaml;Views\LocationListView.xaml;Views\RaftingAddEditView.xaml;Views\RaftingListView.xaml;Views\RaftingStatsView.xaml;
 
 True
 

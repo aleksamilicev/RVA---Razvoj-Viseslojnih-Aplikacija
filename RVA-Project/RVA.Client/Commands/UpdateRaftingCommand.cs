@@ -30,7 +30,7 @@ namespace RVA.Client.Commands
         }
 
         public bool Execute()
-        {
+        {   
             try
             {
                 ExecutedAt = DateTime.Now;
