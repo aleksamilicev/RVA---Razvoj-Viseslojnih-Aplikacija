@@ -159,6 +159,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Commands\SimulateRaftingCommand.cs" />
     <Compile Include="Commands\UpdateRaftingCommand.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\BoolToSaveTextConverter.cs" />
     <Compile Include="Converters\DoubleToStringConverter.cs" />
     <Compile Include="Helpers\DataSeeder.cs" />

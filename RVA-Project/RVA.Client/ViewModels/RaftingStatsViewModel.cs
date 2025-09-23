@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Windows;
 using System.Windows.Threading;
 using RVA.Client.Commands;
 using System.Windows.Input;
@@ -15,7 +16,6 @@ namespace RVA.Client.ViewModels
     public class RaftingStatsViewModel : BaseViewModel
     {
         private readonly WcfServiceClient _serviceClient;
-        // Change the declaration of _updateTimer from readonly to non-readonly
         private DispatcherTimer _updateTimer;
         private string _statusMessage;
         private bool _isLoading;
@@ -24,6 +24,8 @@ namespace RVA.Client.ViewModels
         private int _paddlingCount;
         private int _restingCount;
         private int _finishedCount;
+
+        private DateTime _startTime;
 
         public string StatusMessage
         {
@@ -69,25 +71,29 @@ namespace RVA.Client.ViewModels
 
         public ObservableCollection<string> HistoryLog { get; set; }
 
+        // Kolekcije tačaka za Canvas
+        public ObservableCollection<Point> PlannedPoints { get; } = new ObservableCollection<Point>();
+        public ObservableCollection<Point> BoardingPoints { get; } = new ObservableCollection<Point>();
+        public ObservableCollection<Point> PaddlingPoints { get; } = new ObservableCollection<Point>();
+        public ObservableCollection<Point> RestingPoints { get; } = new ObservableCollection<Point>();
+        public ObservableCollection<Point> FinishedPoints { get; } = new ObservableCollection<Point>();
+
         public ICommand StartMonitoringCommand { get; private set; }
         public ICommand StopMonitoringCommand { get; private set; }
         public ICommand RefreshCommand { get; private set; }
 
-        public RaftingStatsViewModel() : this(null)
-        {
-        }
+        public RaftingStatsViewModel() : this(null) { }
 
         public RaftingStatsViewModel(WcfServiceClient serviceClient = null)
         {
             _serviceClient = serviceClient ?? new WcfServiceClient();
             HistoryLog = new ObservableCollection<string>();
+            _startTime = DateTime.Now;
 
             InitializeCommands();
             InitializeTimer();
 
-            // Start monitoring by default
             StartMonitoring();
-
             StatusMessage = "Statistics initialized. Monitoring started.";
         }
 
@@ -102,7 +108,7 @@ namespace RVA.Client.ViewModels
         {
             _updateTimer = new DispatcherTimer
             {
-                Interval = TimeSpan.FromSeconds(2) // Update every 2 seconds
+                Interval = TimeSpan.FromSeconds(2)
             };
             _updateTimer.Tick += UpdateTimer_Tick;
         }
@@ -114,9 +120,6 @@ namespace RVA.Client.ViewModels
                 _updateTimer.Start();
                 StatusMessage = "Real-time monitoring started";
                 AddToHistory("Monitoring started");
-
-                ((RelayCommand)StartMonitoringCommand).RaiseCanExecuteChanged();
-                ((RelayCommand)StopMonitoringCommand).RaiseCanExecuteChanged();
             }
         }
 
@@ -127,9 +130,6 @@ namespace RVA.Client.ViewModels
                 _updateTimer.Stop();
                 StatusMessage = "Real-time monitoring stopped";
                 AddToHistory("Monitoring stopped");
-
-                ((RelayCommand)StartMonitoringCommand).RaiseCanExecuteChanged();
-                ((RelayCommand)StopMonitoringCommand).RaiseCanExecuteChanged();
             }
         }
 
@@ -152,42 +152,32 @@ namespace RVA.Client.ViewModels
                                            .ToDictionary(g => g.Key, g => g.Count());
 
                     var currentTime = DateTime.Now;
+                    var elapsedSeconds = (currentTime - _startTime).TotalSeconds;
 
-                    // Update counts
-                    var newPlannedCount = statistics.ContainsKey(RaftingState.Planned) ? statistics[RaftingState.Planned] : 0;
-                    var newBoardingCount = statistics.ContainsKey(RaftingState.Boarding) ? statistics[RaftingState.Boarding] : 0;
-                    var newPaddlingCount = statistics.ContainsKey(RaftingState.Paddling) ? statistics[RaftingState.Paddling] : 0;
-                    var newRestingCount = statistics.ContainsKey(RaftingState.Resting) ? statistics[RaftingState.Resting] : 0;
-                    var newFinishedCount = statistics.ContainsKey(RaftingState.Finished) ? statistics[RaftingState.Finished] : 0;
+                    PlannedCount = statistics.ContainsKey(RaftingState.Planned) ? statistics[RaftingState.Planned] : 0;
+                    BoardingCount = statistics.ContainsKey(RaftingState.Boarding) ? statistics[RaftingState.Boarding] : 0;
+                    PaddlingCount = statistics.ContainsKey(RaftingState.Paddling) ? statistics[RaftingState.Paddling] : 0;
+                    RestingCount = statistics.ContainsKey(RaftingState.Resting) ? statistics[RaftingState.Resting] : 0;
+                    FinishedCount = statistics.ContainsKey(RaftingState.Finished) ? statistics[RaftingState.Finished] : 0;
 
-                    // Check for changes
-                    bool hasChanges = newPlannedCount != PlannedCount ||
-                                    newBoardingCount != BoardingCount ||
-                                    newPaddlingCount != PaddlingCount ||
-                                    newRestingCount != RestingCount ||
-                                    newFinishedCount != FinishedCount;
+                    // Dodavanje tačaka za iscrtavanje na Canvas-u
+                    PlannedPoints.Add(new Point(elapsedSeconds, PlannedCount));
+                    BoardingPoints.Add(new Point(elapsedSeconds, BoardingCount));
+                    PaddlingPoints.Add(new Point(elapsedSeconds, PaddlingCount));
+                    RestingPoints.Add(new Point(elapsedSeconds, RestingCount));
+                    FinishedPoints.Add(new Point(elapsedSeconds, FinishedCount));
 
-                    // Update properties
-                    PlannedCount = newPlannedCount;
-                    BoardingCount = newBoardingCount;
-                    PaddlingCount = newPaddlingCount;
-                    RestingCount = newRestingCount;
-                    FinishedCount = newFinishedCount;
+                    // Ograničavamo na poslednjih 50
+                    TrimCollection(PlannedPoints);
+                    TrimCollection(BoardingPoints);
+                    TrimCollection(PaddlingPoints);
+                    TrimCollection(RestingPoints);
+                    TrimCollection(FinishedPoints);
 
                     var totalRaftings = raftings.Count();
                     StatusMessage = $"Updated: {currentTime:HH:mm:ss} | Total: {totalRaftings} | P:{PlannedCount} B:{BoardingCount} Pd:{PaddlingCount} R:{RestingCount} F:{FinishedCount}";
-
-                    // Add to history if there are changes or it's the first update
-                    if (hasChanges || HistoryLog.Count == 0)
-                    {
-                        AddToHistory($"{currentTime:HH:mm:ss} - Total:{totalRaftings} P:{PlannedCount} B:{BoardingCount} Pd:{PaddlingCount} R:{RestingCount} F:{FinishedCount}");
-                    }
+                    AddToHistory(StatusMessage);
                 }
-            }
-            catch (ServiceException ex)
-            {
-                StatusMessage = $"Service error: {ex.Message}";
-                AddToHistory($"{DateTime.Now:HH:mm:ss} - ERROR: {ex.Message}");
             }
             catch (Exception ex)
             {
@@ -198,23 +188,34 @@ namespace RVA.Client.ViewModels
             {
                 IsLoading = false;
             }
+            OnDataUpdated();
+        }
+
+        private void TrimCollection(ObservableCollection<Point> collection)
+        {
+            while (collection.Count > 50)
+                collection.RemoveAt(0);
         }
 
         private void AddToHistory(string message)
         {
             HistoryLog.Insert(0, message);
-
-            // Keep only last 50 entries
             while (HistoryLog.Count > 50)
-            {
                 HistoryLog.RemoveAt(HistoryLog.Count - 1);
-            }
         }
+
+        public event EventHandler DataUpdated;
+
+        private void OnDataUpdated()
+        {
+            DataUpdated?.Invoke(this, EventArgs.Empty);
+        }
+
 
         public void Cleanup()
         {
             _updateTimer?.Stop();
-            _serviceClient?.Dispose();
+            //_serviceClient?.Dispose();
         }
     }
 }

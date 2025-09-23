@@ -4,137 +4,145 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000">
+             d:DesignHeight="800" d:DesignWidth="1200"
+             Unloaded="UserControl_Unloaded">
 
     <UserControl.Resources>
-        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
 
-        <!-- Header -->
-        <TextBlock Grid.Row="0" Text="Rafting States Real-Time Statistics" 
+        <!-- Title -->
+        <TextBlock Grid.Row="0" Text="Rafting Statistics Dashboard" 
                    FontSize="24" FontWeight="Bold" 
                    HorizontalAlignment="Center" 
-                   Margin="20,10"/>
+                   Margin="0,0,0,20"/>
 
-        <!-- Control Panel -->
-        <Border Grid.Row="1" Background="#F0F0F0" BorderBrush="#CCCCCC" BorderThickness="0,1">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <Button Content="▶ Start Monitoring" Command="{Binding StartMonitoringCommand}" 
-                        Background="#4CAF50" Foreground="White" 
-                        Margin="5" Padding="15,8"/>
+        <!-- Control Buttons -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" Margin="0,0,0,10">
+            <Button Content="Start Monitoring" 
+                    Command="{Binding StartMonitoringCommand}"
+                    Margin="0,0,5,0" Padding="10,5"/>
+            <Button Content="Stop Monitoring" 
+                    Command="{Binding StopMonitoringCommand}"
+                    Margin="5,0,5,0" Padding="10,5"/>
+            <Button Content="Refresh" 
+                    Command="{Binding RefreshCommand}"
+                    Margin="5,0,0,0" Padding="10,5"/>
+        </StackPanel>
 
-                <Button Content="⏸ Stop Monitoring" Command="{Binding StopMonitoringCommand}" 
-                        Background="#F44336" Foreground="White" 
-                        Margin="5" Padding="15,8"/>
-
-                <Button Content="🔄 Refresh" Command="{Binding RefreshCommand}" 
-                        Background="#2196F3" Foreground="White" 
-                        Margin="5" Padding="15,8"/>
-            </StackPanel>
-        </Border>
-
-        <!-- Simple Statistics Display -->
-        <Border Grid.Row="2" BorderBrush="#CCCCCC" BorderThickness="1" Margin="20" Background="White">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <!-- Stats Header -->
-                <Border Grid.Row="0" Background="#F8F8F8" BorderBrush="#DDDDDD" BorderThickness="0,0,0,1" Padding="10">
-                    <TextBlock Text="Current Rafting States Count" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
-                </Border>
-
-                <!-- Stats Content -->
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="20">
-                    <StackPanel>
-                        <!-- Current Statistics -->
-                        <Border Background="#F0F8FF" BorderBrush="#B0C4DE" BorderThickness="2" Padding="15" Margin="0,0,0,20">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-
-                                <!-- Headers -->
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Planned" FontWeight="Bold" HorizontalAlignment="Center"/>
-                                <TextBlock Grid.Row="0" Grid.Column="1" Text="Boarding" FontWeight="Bold" HorizontalAlignment="Center"/>
-                                <TextBlock Grid.Row="0" Grid.Column="2" Text="Paddling" FontWeight="Bold" HorizontalAlignment="Center"/>
-                                <TextBlock Grid.Row="0" Grid.Column="3" Text="Resting" FontWeight="Bold" HorizontalAlignment="Center"/>
-                                <TextBlock Grid.Row="0" Grid.Column="4" Text="Finished" FontWeight="Bold" HorizontalAlignment="Center"/>
-
-                                <!-- Values -->
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding PlannedCount}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Gray"/>
-                                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding BoardingCount}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Orange"/>
-                                <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding PaddlingCount}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Green"/>
-                                <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding RestingCount}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Gold"/>
-                                <TextBlock Grid.Row="1" Grid.Column="4" Text="{Binding FinishedCount}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Blue"/>
-                            </Grid>
-                        </Border>
-
-                        <!-- History Log -->
-                        <Border Background="#FAFAFA" BorderBrush="#DDDDDD" BorderThickness="1" Padding="10">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="200"/>
-                                </Grid.RowDefinitions>
-
-                                <TextBlock Grid.Row="0" Text="Recent Updates History:" FontWeight="Bold" Margin="0,0,0,10"/>
-
-                                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-                                    <ItemsControl ItemsSource="{Binding HistoryLog}">
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
-                                                <Border Background="#F5F5F5" BorderBrush="#E0E0E0" BorderThickness="1" Margin="0,2" Padding="8">
-                                                    <TextBlock Text="{Binding}" FontFamily="Consolas" FontSize="11"/>
-                                                </Border>
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-                                    </ItemsControl>
-                                </ScrollViewer>
-                            </Grid>
-                        </Border>
-                    </StackPanel>
-                </ScrollViewer>
-            </Grid>
-        </Border>
-
-        <!-- Status Bar -->
-        <Border Grid.Row="3" Background="#E0E0E0" BorderBrush="#CCCCCC" BorderThickness="0,1,0,0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock Grid.Column="0" Text="{Binding StatusMessage}" 
-                           VerticalAlignment="Center" Margin="10,5"
-                           FontFamily="Consolas" FontSize="11"/>
-
-                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,5">
-                    <ProgressBar Width="100" Height="15" IsIndeterminate="{Binding IsLoading}" 
-                                Visibility="{Binding IsLoading, Converter={StaticResource BoolToVis}}"/>
-                    <TextBlock Text="Loading..." Margin="5,0" 
-                              Visibility="{Binding IsLoading, Converter={StaticResource BoolToVis}}"/>
+        <!-- Statistics Cards -->
+        <UniformGrid Grid.Row="2" Rows="1" Columns="5" Margin="0,0,0,20">
+            <Border Background="#E3F2FD" CornerRadius="8" Padding="15" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="Planned" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="#1976D2"/>
+                    <TextBlock Text="{Binding PlannedCount}" FontSize="28" 
+                               FontWeight="Bold" HorizontalAlignment="Center" 
+                               Foreground="#1976D2"/>
                 </StackPanel>
+            </Border>
+
+            <Border Background="#FFF3E0" CornerRadius="8" Padding="15" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="Boarding" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="#F57C00"/>
+                    <TextBlock Text="{Binding BoardingCount}" FontSize="28" 
+                               FontWeight="Bold" HorizontalAlignment="Center" 
+                               Foreground="#F57C00"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#E8F5E8" CornerRadius="8" Padding="15" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="Paddling" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="#388E3C"/>
+                    <TextBlock Text="{Binding PaddlingCount}" FontSize="28" 
+                               FontWeight="Bold" HorizontalAlignment="Center" 
+                               Foreground="#388E3C"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#F3E5F5" CornerRadius="8" Padding="15" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="Resting" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="#7B1FA2"/>
+                    <TextBlock Text="{Binding RestingCount}" FontSize="28" 
+                               FontWeight="Bold" HorizontalAlignment="Center" 
+                               Foreground="#7B1FA2"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#FFEBEE" CornerRadius="8" Padding="15" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="Finished" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="#D32F2F"/>
+                    <TextBlock Text="{Binding FinishedCount}" FontSize="28" 
+                               FontWeight="Bold" HorizontalAlignment="Center" 
+                               Foreground="#D32F2F"/>
+                </StackPanel>
+            </Border>
+        </UniformGrid>
+
+        <!-- Chart with Canvas -->
+        <GroupBox Grid.Row="3" Header="Real-time Rafting States Chart" 
+                  FontWeight="Bold" Margin="0,0,0,10">
+            <Grid>
+                <Canvas x:Name="ChartCanvas" 
+                        Background="White"
+                        Height="300"
+                        MinHeight="300" />
+
+                <!-- Loading Overlay -->
+                <Border Background="#80FFFFFF" 
+                        Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        CornerRadius="5">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <ProgressBar IsIndeterminate="True" Width="100" Height="20" Margin="0,0,0,10"/>
+                        <TextBlock Text="Loading..." HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
             </Grid>
-        </Border>
+        </GroupBox>
+
+        <!-- Status and History -->
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Status -->
+            <GroupBox Grid.Column="0" Header="Status" FontWeight="Bold" Margin="0,0,5,0">
+                <TextBlock Text="{Binding StatusMessage}" 
+                           VerticalAlignment="Center" 
+                           TextWrapping="Wrap"
+                           Padding="10"/>
+            </GroupBox>
+
+            <!-- History Log -->
+            <GroupBox Grid.Column="1" Header="History Log" FontWeight="Bold" Margin="5,0,0,0">
+                <ListBox ItemsSource="{Binding HistoryLog}" 
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
+                         FontFamily="Consolas" FontSize="11">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Padding" Value="2"/>
+                            <Setter Property="Margin" Value="0"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+            </GroupBox>
+        </Grid>
+
     </Grid>
 </UserControl>
