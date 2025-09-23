@@ -33,6 +33,7 @@ namespace RVA.Client.Commands
         {   
             try
             {
+                ClientLogger.Info($"Executing delete rafting command: {Description}");
                 ExecutedAt = DateTime.Now;
 
                 var success = _serviceClient.Execute(() =>
@@ -41,6 +42,8 @@ namespace RVA.Client.Commands
 
                 if (success)
                 {
+                    ClientLogger.Info($"Rafting updated successfully");
+
                     // Update the rafting in collection
                     var index = _collection.IndexOf(_originalRafting);
                     if (index >= 0)
@@ -50,9 +53,9 @@ namespace RVA.Client.Commands
                     return true;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Log exception if needed
+                ClientLogger.Error($"Error executing update rafting command: {ex.Message}", ex);
             }
             return false;
         }
@@ -76,9 +79,9 @@ namespace RVA.Client.Commands
                     return true;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Log exception if needed
+                ClientLogger.Error($"Error executing undo rafting command: {ex.Message}", ex);
             }
             return false;
         }

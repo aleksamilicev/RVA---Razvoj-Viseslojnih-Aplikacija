@@ -335,6 +335,7 @@ namespace RVA.Client.ViewModels
             {
                 IsLoading = true;
                 StatusMessage = IsEditMode ? "Updating rafting..." : "Creating rafting...";
+                ClientLogger.Info($"{(IsEditMode ? "Updating" : "Creating")} rafting: {Name}");
 
                 var rafting = CreateRaftingDto();
 
@@ -352,6 +353,7 @@ namespace RVA.Client.ViewModels
 
                 // Samo pozovi event sa DTO - ne radi direktno sa servisom
                 StatusMessage = IsEditMode ? "Rafting updated successfully!" : "Rafting created successfully!";
+                ClientLogger.Info($"Rafting {(IsEditMode ? "updated" : "created")} successfully: {rafting.Name}");
                 RaftingSaved?.Invoke(this, rafting);
             }
             catch (Exception ex)

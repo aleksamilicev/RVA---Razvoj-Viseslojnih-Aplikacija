@@ -28,6 +28,7 @@ namespace RVA.Client.Commands
         {
             try
             {
+                ClientLogger.Info($"Executing add rafting command: {Description}");
                 ExecutedAt = DateTime.Now;
 
                 var newId = _serviceClient.Execute(() =>
@@ -36,15 +37,18 @@ namespace RVA.Client.Commands
 
                 if (newId > 0)
                 {
+                    ClientLogger.Info($"Rafting added successfully with ID: {newId}");
+
                     _assignedId = newId;
                     _rafting.Id = newId;
                     _collection.Add(_rafting);
                     return true;
                 }
+                ClientLogger.Warn("Failed to add rafting - no ID returned");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Log exception if needed
+                ClientLogger.Error($"Error executing add rafting command: {ex.Message}", ex);
             }
             return false;
         }
@@ -66,9 +70,9 @@ namespace RVA.Client.Commands
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Log exception if needed
+                ClientLogger.Error($"Error executing undo rafting command: {ex.Message}", ex);
             }
             return false;
         }

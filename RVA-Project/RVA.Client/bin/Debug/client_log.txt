@@ -1,0 +1,100 @@
+2025-09-24 00:52:42,214 [INFO] Loading raftings initiated
+2025-09-24 00:52:42,242 [DEBUG] Executing service call: Load raftings
+2025-09-24 00:52:45,311 [DEBUG] Service call completed successfully: Load raftings
+2025-09-24 00:52:45,311 [INFO] Successfully loaded 10 raftings
+2025-09-24 00:52:45,327 [DEBUG] Executing service call: Load locations
+2025-09-24 00:52:45,367 [DEBUG] Service call completed successfully: Load locations
+2025-09-24 00:52:45,390 [DEBUG] Executing service call: Load clothing
+2025-09-24 00:52:45,437 [DEBUG] Service call completed successfully: Load clothing
+2025-09-24 00:52:47,429 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:47,437 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:47,464 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:47,469 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:49,462 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:49,466 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:49,474 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:49,479 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:51,463 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:51,474 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:51,479 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:51,486 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:53,472 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:53,472 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:53,482 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:53,486 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:55,478 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:55,483 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:57,481 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:57,485 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:52:59,500 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:52:59,506 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:01,506 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:01,511 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:03,542 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:03,547 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:05,542 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:05,546 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:07,556 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:07,561 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:09,562 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:09,567 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:10,028 [INFO] Creating rafting: log_test
+2025-09-24 00:53:10,028 [INFO] Rafting created successfully: log_test
+2025-09-24 00:53:10,028 [INFO] Executing add rafting command: Add rafting 'log_test'
+2025-09-24 00:53:10,028 [DEBUG] Executing service call: Create rafting
+2025-09-24 00:53:10,077 [DEBUG] Service call completed successfully: Create rafting
+2025-09-24 00:53:10,077 [INFO] Rafting added successfully with ID: 11
+2025-09-24 00:53:11,576 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:11,584 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:13,585 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:13,586 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:15,592 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:15,592 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:17,581 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:17,583 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:19,592 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:19,597 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:21,603 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:21,607 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:23,601 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:23,601 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:25,624 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:25,626 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:27,652 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:27,652 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:29,653 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:29,658 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:31,667 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:31,671 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:31,832 [DEBUG] Executing service call: Change rafting state
+2025-09-24 00:53:31,847 [DEBUG] Service call completed successfully: Change rafting state
+2025-09-24 00:53:33,663 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:33,665 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:35,663 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:35,667 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:36,801 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:36,807 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:37,668 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:37,670 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:39,770 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:39,776 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:41,778 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:41,783 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:43,880 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:43,880 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:45,731 [INFO] Updating rafting: log_testd
+2025-09-24 00:53:45,731 [INFO] Rafting updated successfully: log_testd
+2025-09-24 00:53:45,731 [INFO] Executing delete rafting command: Update rafting 'log_testd'
+2025-09-24 00:53:45,734 [DEBUG] Executing service call: Update rafting
+2025-09-24 00:53:45,743 [DEBUG] Service call completed successfully: Update rafting
+2025-09-24 00:53:45,744 [INFO] Rafting updated successfully
+2025-09-24 00:53:45,880 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:45,884 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:47,908 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:47,914 [DEBUG] Service call completed successfully: Get raftings for statistics
+2025-09-24 00:53:48,232 [INFO] Executing delete rafting command: Delete rafting 'log_testd'
+2025-09-24 00:53:48,232 [DEBUG] Executing service call: Delete rafting
+2025-09-24 00:53:48,253 [DEBUG] Service call completed successfully: Delete rafting
+2025-09-24 00:53:48,253 [INFO] Rafting deleted successfully
+2025-09-24 00:53:49,916 [DEBUG] Executing service call: Get raftings for statistics
+2025-09-24 00:53:49,922 [DEBUG] Service call completed successfully: Get raftings for statistics

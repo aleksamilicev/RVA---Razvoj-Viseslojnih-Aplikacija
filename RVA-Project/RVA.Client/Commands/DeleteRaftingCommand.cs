@@ -31,6 +31,7 @@ namespace RVA.Client.Commands
         {
             try
             {
+                ClientLogger.Info($"Executing delete rafting command: {Description}");
                 ExecutedAt = DateTime.Now;
                 _originalIndex = _collection.IndexOf(_rafting);
 
@@ -40,13 +41,15 @@ namespace RVA.Client.Commands
 
                 if (success)
                 {
+                    ClientLogger.Info($"Rafting deleted successfully");
+
                     _collection.Remove(_rafting);
                     return true;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Log exception if needed
+                ClientLogger.Error($"Error executing delete rafting command: {ex.Message}", ex);
             }
             return false;
         }
@@ -75,9 +78,9 @@ namespace RVA.Client.Commands
                     return true;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Log exception if needed
+                ClientLogger.Error($"Error executing undo rafting command: {ex.Message}", ex);
             }
             return false;
         }

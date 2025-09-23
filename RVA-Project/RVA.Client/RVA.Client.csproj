@@ -165,6 +165,7 @@
     <Compile Include="Helpers\DataSeeder.cs" />
     <Compile Include="Interfaces\INavigationService.cs" />
     <Compile Include="Interfaces\IUndoableCommand.cs" />
+    <Compile Include="Services\ClientLogger.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\WcfServiceClient.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />

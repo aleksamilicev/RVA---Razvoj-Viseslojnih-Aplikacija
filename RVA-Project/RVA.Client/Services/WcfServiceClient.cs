@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ServiceModel;
 using System.Threading.Tasks;
+using RVA.Client.Services;
 
 namespace RVA.Client.Services
 {
@@ -188,15 +189,18 @@ namespace RVA.Client.Services
 
         public bool TestConnection()
         {
+            ClientLogger.Info("Testing WCF service connections");
             try
             {
                 RaftingService.GetAll();
                 LocationService.GetAll();
                 ClothingService.GetAll();
+                ClientLogger.Info("All service connections tested successfully");
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                ClientLogger.Error("Service connection test failed", ex);
                 return false;
             }
         }
@@ -214,12 +218,16 @@ namespace RVA.Client.Services
         #region Safe Service Call Helpers
         public T Execute<T>(Func<T> call, string operation)
         {
+            ClientLogger.Debug($"Executing service call: {operation}");
             try
             {
-                return call();
+                var result = call();
+                ClientLogger.Debug($"Service call completed successfully: {operation}");
+                return result;
             }
             catch (CommunicationException ex)
             {
+                ClientLogger.Error($"Communication error during {operation}: {ex.Message}", ex);
                 throw new ServiceException($"Communication error during {operation}: {ex.Message}", ex);
             }
             catch (TimeoutException ex)

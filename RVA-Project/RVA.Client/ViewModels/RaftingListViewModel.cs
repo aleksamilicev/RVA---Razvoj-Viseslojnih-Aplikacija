@@ -193,6 +193,7 @@ namespace RVA.Client.ViewModels
             {
                 IsLoading = true;
                 StatusMessage = "Loading raftings...";
+                ClientLogger.Info("Loading raftings initiated");
 
                 var raftings = _serviceClient.Execute(() => _serviceClient.RaftingService.GetAll(), "Load raftings");
 
@@ -203,14 +204,17 @@ namespace RVA.Client.ViewModels
                 }
 
                 StatusMessage = $"Loaded {Raftings.Count} raftings successfully.";
+                ClientLogger.Info($"Successfully loaded {Raftings.Count} raftings");
             }
             catch (ServiceException ex)
             {
                 StatusMessage = $"Error loading raftings: {ex.Message}";
+                ClientLogger.Error($"Failed to load raftings: {ex.Message}", ex);
             }
             catch (Exception ex)
             {
                 StatusMessage = $"Unexpected error: {ex.Message}";
+                ClientLogger.Error($"Failed to load raftings: {ex.Message}", ex);
             }
             finally
             {
@@ -235,6 +239,7 @@ namespace RVA.Client.ViewModels
                 {
                     _runningSimulations[SelectedRafting.Id] = simulateCommand;
                     StatusMessage = $"Starting simulation for '{SelectedRafting.Name}'";
+                    ClientLogger.Info($"Starting simulation for rafting ID: {SelectedRafting.Id}");
 
                     // Update command states
                     ((RelayCommand)SimulateCommand).RaiseCanExecuteChanged();
@@ -361,6 +366,7 @@ namespace RVA.Client.ViewModels
                     var deletedName = SelectedRafting.Name;
                     SelectedRafting = null;
                     StatusMessage = $"Rafting '{deletedName}' deleted successfully.";
+                    ClientLogger.Info($"Rafting deleted successfully: {deletedName}");
                 }
                 else
                 {
